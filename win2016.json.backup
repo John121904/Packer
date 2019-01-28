@@ -1,0 +1,64 @@
+{
+  "builders": [
+    {
+      "type": "vsphere-iso",
+
+      "vcenter_server": "10.213.252.78",
+      "insecure_connection": "true",
+      "username": "{{user `vcenter_username`}}",
+      "password": "{{user `vcenter_password`}}",
+      "datacenter": "NV02",
+
+      "vm_name":  "WindowsTest_TMPL",
+      "convert_to_template": "true",
+      "cluster": "NV02 Test",
+      "host": "svnv02ie01200.int.carlsonwagonlit.com",
+      "datastore": "NV02-Test",
+      "folder": "Test/Windows",
+
+      "CPUs": "1",
+      "RAM": "2048",
+      "disk_size": "51200",
+      "disk_controller_type": "pvscsi",
+      "disk_thin_provisioned": true,
+      "network_card": "vmxnet3",
+
+      "network": "603-Internal_Pre-Prod_vDS",
+      "guest_os_type": "windows9Server64Guest",
+      "iso_paths": [
+        "[NV02-Test] ISO/SW_DVD9_Win_Svr_STD_Core_and_DataCtr_Core_2016_64Bit_English_-2_MLF_X21-22843.ISO"
+      ],
+
+      "communicator": "winrm",
+      "winrm_username": "cwtunix",
+      "winrm_password": "carls0n!",
+      "floppy_files": [
+        "./answer_files/AutoUnattend.xml",
+        "./scripts/post_deploy.cmd",
+        "./scripts/sysprepspecialize.cmd",
+        "./scripts/win-updates.ps1",
+        "./scripts/Win2016Features.ps1"
+      ],
+      "floppy_img_path": "[NV02-Test] floppies/pvscsi-Windows8.flp",
+      "boot_wait": "6m",
+      "boot_command": [
+       ]
+      }
+    ],
+    "provisioners": [
+        {
+            "environment_vars": [
+                "RH_ACT_KEY={{user `activationkey`}}",
+                "ANSIBLE_REPOS={{user `ansible_repos`}}"
+            ],
+            "execute_command": "echo 'cwtunix' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+                       "script": "scripts/ansible.sh",
+                       "type": "shell"
+        },
+        {
+                       "execute_command": "echo 'cwtunix' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
+                       "script": "scripts/cleanup.sh",
+                       "type": "shell"
+        }
+  ]
+}
