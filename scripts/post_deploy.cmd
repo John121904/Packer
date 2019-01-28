@@ -28,6 +28,10 @@ powercfg.exe -h off
 :: Install VMware tools from mounted ISO 
 e:\setup64 /s /v "/qb REBOOT=R"
 
+::set static IP
+netsh interface ip set address name="Ethernet0" static 10.213.4.198 255.255.255.0 10.213.4.250
+netsh dnsclient set dnsservers name="Ethernet0" source=static address=10.213.252.25 validate=no
+
 :: Set Disk TimeOutValue to 190 seconds
 reg add "HKLM\SYSTEM\CurrentControlSet\services\Disk" /v "TimeOutValue" /t REG_DWORD /d "190" /f
 
@@ -36,20 +40,20 @@ reg add "HKLM\SYSTEM\CurrentControlSet\services\Disk" /v "TimeOutValue" /t REG_D
 
 :: ** Create D: Partition **
 :: Create c:\diskpart.txt script file.
-ECHO select volume d > c:\diskpart.txt
-ECHO assign letter e >> c:\diskpart.txt
-ECHO select disk 1 >> c:\diskpart.txt
-ECHO attributes disk clear readonly >> c:\diskpart.txt
-ECHO online disk >> c:\diskpart.txt
-ECHO clean >> c:\diskpart.txt
-ECHO create partition primary align=128 >> c:\diskpart.txt
-ECHO assign letter d >> c:\diskpart.txt
+:: ECHO select volume d > c:\diskpart.txt
+:: ECHO assign letter e >> c:\diskpart.txt
+:: ECHO select disk 1 >> c:\diskpart.txt
+:: ECHO attributes disk clear readonly >> c:\diskpart.txt
+:: ECHO online disk >> c:\diskpart.txt
+:: ECHO clean >> c:\diskpart.txt
+:: ECHO create partition primary align=128 >> c:\diskpart.txt
+:: ECHO assign letter d >> c:\diskpart.txt
 :: Execute diskpart script.  WARNING:This will destroy everything on disk 1
-start /wait Diskpart /s c:\diskpart.txt
+:: start /wait Diskpart /s c:\diskpart.txt
 :: Format D: with NTFS
-start /wait format d: /FS:NTFS /v:DATA /q /y
+:: start /wait format d: /FS:NTFS /v:DATA /q /y
 :: Delete diskpart.txt
-DEL C:\diskpart.txt /F /Q
+:: DEL C:\diskpart.txt /F /Q
 
 
 :: Create D: Drive Structure
@@ -98,6 +102,10 @@ reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "Leg
 reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "LegalNoticeCaption" /t REG_SZ /d "Carlson Wagonlit Travel" /f
 :: Error Denied, added to template. 
 :: reg add "HKLM\Software\Microsoft\Windows\HTML Help\CT2016D" /v "CWErevision" /t REG_SZ /d "03142017" /f
+
+::run powershell scripts
+a:\powershell ./win-updates.ps1
+a:\powershell ./Win2016features.ps1
 
 :: Restart the Server
 shutdown /s /t 15 
