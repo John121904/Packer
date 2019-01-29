@@ -115,7 +115,7 @@
             </AutoLogon>      
 <FirstLogonCommands>
         <SynchronousCommand wcm:action="add">
-           <CommandLine>a:\post_deploy.cmd</CommandLine>
+           <CommandLine>a:\base.cmd</CommandLine>
            <Order>1</Order>
         </SynchronousCommand>
       </FirstLogonCommands>

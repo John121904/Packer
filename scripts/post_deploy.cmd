@@ -32,6 +32,10 @@ e:\setup64 /s /v "/qb REBOOT=R"
 netsh interface ip set address name="Ethernet0" static 10.213.4.198 255.255.255.0 10.213.4.250
 netsh dnsclient set dnsservers name="Ethernet0" source=static address=10.213.252.25 validate=no
 
+::set windows firewall
+netsh advfirewall set allprofiles state on
+netsh advfirewall set allprofiles firewallpolicy allowinboound,allowoutbound
+
 :: Set Disk TimeOutValue to 190 seconds
 reg add "HKLM\SYSTEM\CurrentControlSet\services\Disk" /v "TimeOutValue" /t REG_DWORD /d "190" /f
 
@@ -104,13 +108,22 @@ reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "Leg
 :: reg add "HKLM\Software\Microsoft\Windows\HTML Help\CT2016D" /v "CWErevision" /t REG_SZ /d "03142017" /f
 
 ::run powershell scripts
-a:\powershell ./win-updates.ps1
-a:\powershell ./Win2016features.ps1
+::powershell a:\win-updates.ps1
+::powershell a:\Win2016features.ps1
+
+::start WinRM
+net start winrm
+
+::config WinRM
+powershell a:\winrm.ps1
+
+::change drive letter
+powershell a:\changeCDdrive.ps1
 
 :: Restart the Server
-shutdown /s /t 15 
+::shutdown /s /t 60 
 
-ping -n 30 127.0.0.1>nul
+::ping -n 30 127.0.0.1>nul
 
 ::Clean up
 RD /S /Q C:\Install

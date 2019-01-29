@@ -31,11 +31,16 @@
       ],
 
       "communicator": "winrm",
-      "winrm_username": "cwtunix",
-      "winrm_password": "carls0n!",
+      "winrm_username": "ugxg042",
+      "winrm_password": "{{user `winrm_password`}}",
+      "winrm_use_ssl": "false",
       "floppy_files": [
         "./answer_files/AutoUnattend.xml",
         "./scripts/post_deploy.cmd",
+        "./scripts/base.cmd",
+        "./scripts/winrm.ps1",
+        "./scripts/sceregvl.inf",
+        "./scripts/changeCDdrive.ps1",
         "./scripts/sysprepspecialize.cmd",
         "./scripts/win-updates.ps1",
         "./scripts/Win2016Features.ps1"
@@ -49,17 +54,13 @@
     "provisioners": [
         {
             "environment_vars": [
-                "RH_ACT_KEY={{user `activationkey`}}",
-                "ANSIBLE_REPOS={{user `ansible_repos`}}"
             ],
-            "execute_command": "echo 'cwtunix' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
-                       "script": "scripts/ansible.sh",
-                       "type": "shell"
-        },
-        {
-                       "execute_command": "echo 'cwtunix' | {{.Vars}} sudo -S -E bash '{{.Path}}'",
-                       "script": "scripts/cleanup.sh",
-                       "type": "shell"
+           
+                       "script": "scripts/win-updates.ps1",
+                       "elevated_user": "ugxg042",
+                       "elevated_password": "{{user `elevated_password`}}",
+                       "type": "powershell"
         }
+
   ]
 }
