@@ -76,7 +76,7 @@
                        "script": "scripts/compact.ps1",
                        "elevated_user": "ugxg042",
                        "elevated_password": "{{user `elevated_password`}}",
-                       "pause_before": "30s",
+                       "pause_before": "2m",
                        "type": "powershell"
         }
 
