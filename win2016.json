@@ -42,8 +42,8 @@
         "./scripts/winrm.ps1",
         "./scripts/sceregvl.inf",
         "./scripts/changeCDdrive.ps1",
-        "./scripts/compact.cmd",
-        "./scripts/sdelete/sdelete.exe,
+        "./scripts/compact.ps1",
+        "./scripts/sdelete/sdelete.exe",
         "./scripts/win-updates.ps1",
         "./scripts/Win2016Features.ps1"
       ],
