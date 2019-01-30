@@ -58,9 +58,16 @@
             "environment_vars": [
             ],
            
+                       "script": "scripts/win-updates.ps1",
+                       "elevated_user": "ugxg042",
+                       "elevated_password": "{{user `elevated_password`}}",
+                       "type": "powershell"
+        },
+        {
                        "script": "scripts/compact.ps1",
                        "elevated_user": "ugxg042",
                        "elevated_password": "{{user `elevated_password`}}",
+                       "pause_before": "30s",
                        "type": "powershell"
         }
 

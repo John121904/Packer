@@ -109,7 +109,7 @@ reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "Leg
 
 ::run powershell scripts
 ::powershell a:\win-updates.ps1
-::powershell a:\Win2016features.ps1
+powershell a:\Win2016features.ps1
 
 ::start WinRM
 net start winrm
@@ -118,7 +118,7 @@ net start winrm
 powershell a:\winrm.ps1
 
 ::run windows updates
-powershell a:\win-updates.ps1
+::powershell a:\win-updates.ps1
 
 ::change drive letter
 powershell a:\changeCDdrive.ps1
