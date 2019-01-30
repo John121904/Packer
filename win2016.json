@@ -34,6 +34,7 @@
       "winrm_username": "ugxg042",
       "winrm_password": "{{user `winrm_password`}}",
       "winrm_use_ssl": "false",
+      "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "floppy_files": [
         "./answer_files/AutoUnattend.xml",
         "./scripts/post_deploy.cmd",
@@ -41,7 +42,8 @@
         "./scripts/winrm.ps1",
         "./scripts/sceregvl.inf",
         "./scripts/changeCDdrive.ps1",
-        "./scripts/sysprepspecialize.cmd",
+        "./scripts/compact.cmd",
+        "./scripts/sdelete/sdelete.exe,
         "./scripts/win-updates.ps1",
         "./scripts/Win2016Features.ps1"
       ],
@@ -56,7 +58,7 @@
             "environment_vars": [
             ],
            
-                       "script": "scripts/win-updates.ps1",
+                       "script": "scripts/compact.ps1",
                        "elevated_user": "ugxg042",
                        "elevated_password": "{{user `elevated_password`}}",
                        "type": "powershell"

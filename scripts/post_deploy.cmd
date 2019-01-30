@@ -117,6 +117,9 @@ net start winrm
 ::config WinRM
 powershell a:\winrm.ps1
 
+::run windows updates
+powershell a:\win-updates.ps1
+
 ::change drive letter
 powershell a:\changeCDdrive.ps1
 
