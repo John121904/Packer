@@ -1,34 +1,3 @@
-REM  QBFC Project Options Begin
-REM  HasVersionInfo: No
-REM  Companyname: 
-REM  Productname: 
-REM  Filedescription: 
-REM  Copyrights: 
-REM  Trademarks: 
-REM  Originalname: 
-REM  Comments: 
-REM  Productversion:  0. 0. 0. 0
-REM  Fileversion:  0. 0. 0. 0
-REM  Internalname: 
-REM  Appicon: 
-REM  QBFC Project Options End
-
-@ECHO OFF
-
-:: *** Post-build script for Carlson Wagonlit Travel (Windows Server 2016) ***
-
-:: Reconfigure Pagefile
-wmic computersystem set AutomaticManagedPagefile=True
-
-fsutil behavior set disablelastaccess 1
-
-:: Disable Hibernation
-powercfg.exe -h off
-
-:: Install VMware tools from mounted ISO 
-e:\setup64 /s /v "/qb REBOOT=R"
-
-::set static IP
 netsh interface ip set address name="Ethernet0" static 10.213.4.198 255.255.255.0 10.213.4.250
 netsh dnsclient set dnsservers name="Ethernet0" source=static address=10.213.252.25 validate=no
 
@@ -109,7 +78,7 @@ reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "Leg
 
 ::run powershell scripts
 ::powershell a:\win-updates.ps1
-powershell a:\Win2016features.ps1
+::powershell a:\Win2016features.ps1
 
 ::start WinRM
 net start winrm

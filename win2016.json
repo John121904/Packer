@@ -55,6 +55,15 @@
     ],
     "provisioners": [
         {
+                       "script": "scripts/Win2016Features.ps1",
+                       "elevated_user": "ugxg042",
+                       "elevated_password": "{{user `elevated_password`}}",
+                       "type": "powershell"
+        },
+        {
+                        "type": "windows-restart"
+        },
+        {
             "environment_vars": [
             ],
            
