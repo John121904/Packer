@@ -40,7 +40,7 @@ netsh advfirewall set allprofiles firewallpolicy allowinboound,allowoutbound
 reg add "HKLM\SYSTEM\CurrentControlSet\services\Disk" /v "TimeOutValue" /t REG_DWORD /d "190" /f
 
 :: Set TimeZoneKeyName to Pacific just to fix the gui
-:: reg add "HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" /v "TimeZoneKeyName" /t REG_SZ /d "Pacific Standard Time" /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" /v "TimeZoneKeyName" /t REG_SZ /d "Pacific Standard Time" /f
 
 :: ** Create D: Partition **
 :: Create c:\diskpart.txt script file.
