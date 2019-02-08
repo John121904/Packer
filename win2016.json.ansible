@@ -54,17 +54,18 @@
       }
     ],
     "provisioners": [
+                {
+            "command": "ansible-playbook packer-windoze-master/main.yml -i wintemplate -vv",
+            "type": "shell-local"
+        },
         {
-                       "script": "scripts/Win2016Features.ps1",
-                       "elevated_user": "ugxg042",
-                       "elevated_password": "{{user `elevated_password`}}",
-                       "type": "powershell"
+                        "type": "windows-restart"
         },
         {
             "environment_vars": [
             ],
            
-                       "script": "scripts/win-updates.ps1",
+                       "script": "scripts/compact.ps1",
                        "elevated_user": "ugxg042",
                        "elevated_password": "{{user `elevated_password`}}",
                        "type": "powershell"
@@ -73,7 +74,7 @@
                        "script": "scripts/compact.ps1",
                        "elevated_user": "ugxg042",
                        "elevated_password": "{{user `elevated_password`}}",
-                       "pause_before": "5m",
+                       "pause_before": "3m",
                        "type": "powershell"
         }
 

@@ -132,7 +132,7 @@ function Install-WindowsUpdates() {
 
     if ($rebootMayBeRequired) {
         LogWrite 'These updates may require a reboot'
-        $global:RestartRequired=1
+        $global:RestartRequired=0
     }
 
     LogWrite 'Installing updates...'
@@ -145,7 +145,8 @@ function Install-WindowsUpdates() {
     LogWrite "Reboot Required: $($InstallationResult.RebootRequired)"
     LogWrite 'Listing of updates installed and individual installation results:'
     if ($InstallationResult.RebootRequired) {
-        $global:RestartRequired=1
+#disable reboot
+        $global:RestartRequired=0
     } else {
         $global:RestartRequired=0
     }
@@ -197,7 +198,7 @@ function Check-WindowsUpdates() {
         } catch {
             LogWrite $_.Exception | Format-List -force
             LogWrite "Showing SearchResult was unsuccessful. Rebooting."
-            $global:RestartRequired=1
+            $global:RestartRequired=0
             $global:MoreUpdates=0
             Check-ContinueRestartOrEnd
             LogWrite "Show never happen to see this text!"

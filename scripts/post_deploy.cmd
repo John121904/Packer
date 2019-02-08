@@ -36,11 +36,12 @@ netsh dnsclient set dnsservers name="Ethernet0" source=static address=10.213.252
 netsh advfirewall set allprofiles state on
 netsh advfirewall set allprofiles firewallpolicy allowinboound,allowoutbound
 
+
 :: Set Disk TimeOutValue to 190 seconds
 reg add "HKLM\SYSTEM\CurrentControlSet\services\Disk" /v "TimeOutValue" /t REG_DWORD /d "190" /f
 
 :: Set TimeZoneKeyName to Pacific just to fix the gui
-reg add "HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" /v "TimeZoneKeyName" /t REG_SZ /d "Pacific Standard Time" /f
+:: reg add "HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" /v "TimeZoneKeyName" /t REG_SZ /d "Pacific Standard Time" /f
 
 :: ** Create D: Partition **
 :: Create c:\diskpart.txt script file.
@@ -75,6 +76,10 @@ MKDIR D:\Resource\www\dev
 MKDIR D:\Resource\www\qa
 MKDIR D:\Resource\www\staging
 MKDIR D:\Resource\www\prod
+
+::set windows firewall
+netsh advfirewall set allprofiles state on
+netsh advfirewall set allprofiles firewallpolicy allowinboound,allowoutbound
 
 :: Set boot delay to 10 seconds (again)
 bcdedit /timeout 10
@@ -115,10 +120,18 @@ reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "Leg
 net start winrm
 
 ::config WinRM
-powershell a:\winrm.ps1
+::powershell a:\winrm.ps1
 
+winrm quickconfig
+winrm set winrm/config/client/auth '@{Basic="true"}'
+winrm set winrm/config/service/auth '@{Basic="true"}'
+winrm set winrm/config/service '@{AllowUnencrypted="true"}'
 ::run windows updates
 ::powershell a:\win-updates.ps1
+
+::set windows firewall
+::netsh advfirewall set allprofiles state on
+::netsh advfirewall set allprofiles firewallpolicy allowinboound,allowoutbound
 
 ::change drive letter
 powershell a:\changeCDdrive.ps1
