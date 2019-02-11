@@ -24,6 +24,8 @@ fsutil behavior set disablelastaccess 1
 
 :: Disable Hibernation
 powercfg.exe -h off
+:: Set High Performance
+powercfg.exe /SETACTIVE 8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c
 
 :: Install VMware tools from mounted ISO 
 e:\setup64 /s /v "/qb REBOOT=R"
@@ -37,10 +39,16 @@ netsh advfirewall set allprofiles state on
 netsh advfirewall set allprofiles firewallpolicy allowinboound,allowoutbound
 
 
+:: Use small dump file on system failure, see below for setting
+:: 0=None, 1=Complete, 2=Kernel, 3=Small, 7=Automatic
+:: gwmi Win32_OSRecoveryConfiguration -EnableAllPrivileges | swmi -Arguments @{DebugInfoType=3}
 :: Set Disk TimeOutValue to 190 seconds
 reg add "HKLM\SYSTEM\CurrentControlSet\services\Disk" /v "TimeOutValue" /t REG_DWORD /d "190" /f
 
-:: Set TimeZoneKeyName to Pacific just to fix the gui
+:: Disable indexing on all drives
+:: gwmi Win32_Volume -Filter "IndexingEnabled=$true" | swmi -Arguments @{IndexingEnabled=$false}
+
+:: Set TimeZoneKeyName to Pacific just to fix the gui ENABLING THIS WILL MESS UP PACKER
 :: reg add "HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation" /v "TimeZoneKeyName" /t REG_SZ /d "Pacific Standard Time" /f
 
 :: ** Create D: Partition **
@@ -122,9 +130,9 @@ net start winrm
 ::config WinRM
 ::powershell a:\winrm.ps1
 
-winrm quickconfig
+winrm quickconfig -quiet
 winrm set winrm/config/client/auth '@{Basic="true"}'
-winrm set winrm/config/service/auth '@{Basic="true"}'
+winrm set winrm/config/service/auth '@{Basic="true"}' 
 winrm set winrm/config/service '@{AllowUnencrypted="true"}'
 ::run windows updates
 ::powershell a:\win-updates.ps1
