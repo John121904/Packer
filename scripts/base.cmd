@@ -172,7 +172,9 @@ echo Base Build script complete
 echo.
 echo Next steps:
 echo ** Import Security Configuration
-echo ** Reboot system
+echo ** Turn on WinRM
+echo ** Configure Windows Firewall
+echo ** Install Windows Features
 echo ** Run Windows Updates
 
 :: shutdown /r
