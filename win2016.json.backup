@@ -34,11 +34,13 @@
       "winrm_username": "ugxg042",
       "winrm_password": "{{user `winrm_password`}}",
       "winrm_use_ssl": "false",
-      "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
+      "shutdown_command": "scripts/shutdown.cmd",
       "floppy_files": [
         "./answer_files/AutoUnattend.xml",
+        "./answer_files/PostUnattend.xml",
         "./scripts/post_deploy.cmd",
         "./scripts/base.cmd",
+        "./scripts/shutdown.cmd",
         "./scripts/winrm.ps1",
         "./scripts/sceregvl.inf",
         "./scripts/changeCDdrive.ps1",
@@ -51,7 +53,7 @@
       ],
       "floppy_img_path": "[NV02-Test] floppies/pvscsi-Windows8.flp",
       "boot_wait": "6m",
-      "shutdown_timeout": "1h"
+      "shutdown_timeout": "1h",
       "boot_command": [
        ]
       }
@@ -73,6 +75,9 @@
                        "type": "powershell"
         },
         {
+                       "type": "windows-restart"
+        },
+        {
                        "script": "scripts/disable-nicsettings.ps1",
                        "elevated_user": "ugxg042",
                        "elevated_password": "{{user `elevated_password`}}",
@@ -83,13 +88,6 @@
                        "elevated_user": "ugxg042",
                        "elevated_password": "{{user `elevated_password`}}",
                        "type": "powershell"
-        },
-        {
-                       "script": "scripts/disable-winrm.ps1",
-                       "elevated_user": "ugxg042",
-                       "elevated_password": "{{user `elevated_password`}}",
-                       "type": "powershell"
         }
-
   ]
 }

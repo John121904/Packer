@@ -1,295 +1,458 @@
-2019/01/30 06:15:50 [INFO] Packer version: 1.3.3
-2019/01/30 06:15:50 Packer Target OS/Arch: linux amd64
-2019/01/30 06:15:50 Built with Go Version: go1.11.2
-2019/01/30 06:15:50 Detected home directory from env var: /home/u014cxf
-2019/01/30 06:15:50 [DEBUG] Discovered plugin: vsphere-clone = /home/u014cxf/.packer.d/plugins/packer-builder-vsphere-clone.linux
-2019/01/30 06:15:50 [DEBUG] Discovered plugin: vsphere-iso = /home/u014cxf/.packer.d/plugins/packer-builder-vsphere-iso.linux
-2019/01/30 06:15:50 Using internal plugin for amazon-chroot
-2019/01/30 06:15:50 Using internal plugin for virtualbox-ovf
-2019/01/30 06:15:50 Using internal plugin for amazon-ebs
-2019/01/30 06:15:50 Using internal plugin for ncloud
-2019/01/30 06:15:50 Using internal plugin for oneandone
-2019/01/30 06:15:50 Using internal plugin for openstack
-2019/01/30 06:15:50 Using internal plugin for triton
-2019/01/30 06:15:50 Using internal plugin for virtualbox-iso
-2019/01/30 06:15:50 Using internal plugin for azure-arm
-2019/01/30 06:15:50 Using internal plugin for cloudstack
-2019/01/30 06:15:50 Using internal plugin for lxd
-2019/01/30 06:15:50 Using internal plugin for scaleway
-2019/01/30 06:15:50 Using internal plugin for file
-2019/01/30 06:15:50 Using internal plugin for hcloud
-2019/01/30 06:15:50 Using internal plugin for profitbricks
-2019/01/30 06:15:50 Using internal plugin for amazon-ebssurrogate
-2019/01/30 06:15:50 Using internal plugin for parallels-pvm
-2019/01/30 06:15:50 Using internal plugin for googlecompute
-2019/01/30 06:15:50 Using internal plugin for hyperv-vmcx
-2019/01/30 06:15:50 Using internal plugin for lxc
-2019/01/30 06:15:50 Using internal plugin for null
-2019/01/30 06:15:50 Using internal plugin for oracle-classic
-2019/01/30 06:15:50 Using internal plugin for oracle-oci
-2019/01/30 06:15:50 Using internal plugin for amazon-instance
-2019/01/30 06:15:50 Using internal plugin for digitalocean
-2019/01/30 06:15:50 Using internal plugin for parallels-iso
-2019/01/30 06:15:50 Using internal plugin for docker
-2019/01/30 06:15:50 Using internal plugin for vmware-iso
-2019/01/30 06:15:50 Using internal plugin for alicloud-ecs
-2019/01/30 06:15:50 Using internal plugin for amazon-ebsvolume
-2019/01/30 06:15:50 Using internal plugin for vmware-vmx
-2019/01/30 06:15:50 Using internal plugin for hyperv-iso
-2019/01/30 06:15:50 Using internal plugin for qemu
-2019/01/30 06:15:50 Using internal plugin for breakpoint
-2019/01/30 06:15:50 Using internal plugin for file
-2019/01/30 06:15:50 Using internal plugin for puppet-masterless
-2019/01/30 06:15:50 Using internal plugin for windows-shell
-2019/01/30 06:15:50 Using internal plugin for ansible
-2019/01/30 06:15:50 Using internal plugin for chef-solo
-2019/01/30 06:15:50 Using internal plugin for converge
-2019/01/30 06:15:50 Using internal plugin for powershell
-2019/01/30 06:15:50 Using internal plugin for shell
-2019/01/30 06:15:50 Using internal plugin for windows-restart
-2019/01/30 06:15:50 Using internal plugin for chef-client
-2019/01/30 06:15:50 Using internal plugin for puppet-server
-2019/01/30 06:15:50 Using internal plugin for salt-masterless
-2019/01/30 06:15:50 Using internal plugin for shell-local
-2019/01/30 06:15:50 Using internal plugin for ansible-local
-2019/01/30 06:15:50 Using internal plugin for compress
-2019/01/30 06:15:50 Using internal plugin for docker-tag
-2019/01/30 06:15:50 Using internal plugin for vagrant
-2019/01/30 06:15:50 Using internal plugin for vagrant-cloud
-2019/01/30 06:15:50 Using internal plugin for vsphere
-2019/01/30 06:15:50 Using internal plugin for checksum
-2019/01/30 06:15:50 Using internal plugin for docker-import
-2019/01/30 06:15:50 Using internal plugin for docker-push
-2019/01/30 06:15:50 Using internal plugin for docker-save
-2019/01/30 06:15:50 Using internal plugin for manifest
-2019/01/30 06:15:50 Using internal plugin for shell-local
-2019/01/30 06:15:50 Using internal plugin for googlecompute-export
-2019/01/30 06:15:50 Using internal plugin for googlecompute-import
-2019/01/30 06:15:50 Using internal plugin for alicloud-import
-2019/01/30 06:15:50 Using internal plugin for amazon-import
-2019/01/30 06:15:50 Using internal plugin for artifice
-2019/01/30 06:15:50 Using internal plugin for vsphere-template
-2019/01/30 06:15:50 Detected home directory from env var: /home/u014cxf
-2019/01/30 06:15:50 Attempting to open config file: /home/u014cxf/.packerconfig
-2019/01/30 06:15:50 [WARN] Config file doesn't exist: /home/u014cxf/.packerconfig
-2019/01/30 06:15:50 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[vsphere-clone:/home/u014cxf/.packer.d/plugins/packer-builder-vsphere-clone.linux virtualbox-ovf:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-ovf ncloud:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-ncloud googlecompute:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-googlecompute hyperv-vmcx:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperv-vmcx docker:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-docker oneandone:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oneandone profitbricks:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-profitbricks digitalocean:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-digitalocean parallels-iso:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-iso amazon-ebs:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebs virtualbox-iso:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-iso parallels-pvm:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-pvm null:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-null amazon-chroot:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-chroot hyperv-iso:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperv-iso openstack:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-openstack triton:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-triton lxd:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-lxd scaleway:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-scaleway amazon-ebssurrogate:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebssurrogate oracle-oci:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oracle-oci vmware-iso:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-iso cloudstack:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-cloudstack hcloud:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hcloud amazon-instance:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-instance vmware-vmx:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-vmx vsphere-iso:/home/u014cxf/.packer.d/plugins/packer-builder-vsphere-iso.linux lxc:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-lxc oracle-classic:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oracle-classic qemu:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-qemu azure-arm:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-azure-arm file:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-file alicloud-ecs:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-alicloud-ecs amazon-ebsvolume:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebsvolume] PostProcessors:map[alicloud-import:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-alicloud-import amazon-import:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-amazon-import docker-import:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-import shell-local:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-shell-local googlecompute-export:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-googlecompute-export googlecompute-import:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-googlecompute-import docker-tag:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-tag vsphere:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vsphere vagrant-cloud:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant-cloud docker-push:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-push checksum:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-checksum docker-save:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-save manifest:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-manifest artifice:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-artifice vsphere-template:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vsphere-template compress:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-compress vagrant:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant] Provisioners:map[chef-solo:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-solo converge:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-converge windows-restart:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-restart shell-local:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell-local breakpoint:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-breakpoint file:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-file powershell:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-powershell shell:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell chef-client:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-client salt-masterless:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-salt-masterless ansible-local:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible-local ansible:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible puppet-server:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-server puppet-masterless:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-masterless windows-shell:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-shell]}
-2019/01/30 06:15:50 Detected home directory from env var: /home/u014cxf
-2019/01/30 06:15:50 Setting cache directory: /home/u014cxf/packer/packer_cache
-2019/01/30 06:15:50 Detected home directory from env var: /home/u014cxf
-2019/01/30 06:15:50 Loading builder: vsphere-iso
-2019/01/30 06:15:50 Creating plugin client for path: /home/u014cxf/.packer.d/plugins/packer-builder-vsphere-iso.linux
-2019/01/30 06:15:50 Starting plugin: /home/u014cxf/.packer.d/plugins/packer-builder-vsphere-iso.linux []string{"/home/u014cxf/.packer.d/plugins/packer-builder-vsphere-iso.linux"}
-2019/01/30 06:15:50 Waiting for RPC address for: /home/u014cxf/.packer.d/plugins/packer-builder-vsphere-iso.linux
-2019/01/30 06:15:50 packer-builder-vsphere-iso.linux: 2019/01/30 06:15:50 Plugin minimum port: 10000
-2019/01/30 06:15:50 packer-builder-vsphere-iso.linux: 2019/01/30 06:15:50 Plugin maximum port: 25000
-2019/01/30 06:15:50 packer-builder-vsphere-iso.linux: 2019/01/30 06:15:50 Plugin address: unix /tmp/packer-plugin062979482
-2019/01/30 06:15:50 packer-builder-vsphere-iso.linux: 2019/01/30 06:15:50 Waiting for connection...
-2019/01/30 06:15:50 packer-builder-vsphere-iso.linux: 2019/01/30 06:15:50 Serving a plugin connection...
-2019/01/30 06:15:50 Loading provisioner: powershell
-2019/01/30 06:15:50 Plugin could not be found. Checking same directory as executable.
-2019/01/30 06:15:50 Current exe path: /usr/local/bin/packer
-2019/01/30 06:15:50 Creating plugin client for path: /usr/local/bin/packer
-2019/01/30 06:15:50 Starting plugin: /usr/local/bin/packer []string{"/usr/local/bin/packer", "plugin", "packer-provisioner-powershell"}
-2019/01/30 06:15:50 Waiting for RPC address for: /usr/local/bin/packer
-2019/01/30 06:15:50 packer: 2019/01/30 06:15:50 [INFO] Packer version: 1.3.3
-2019/01/30 06:15:50 packer: 2019/01/30 06:15:50 Packer Target OS/Arch: linux amd64
-2019/01/30 06:15:50 packer: 2019/01/30 06:15:50 Built with Go Version: go1.11.2
-2019/01/30 06:15:50 packer: 2019/01/30 06:15:50 Detected home directory from env var: /home/u014cxf
-2019/01/30 06:15:50 packer: 2019/01/30 06:15:50 Attempting to open config file: /home/u014cxf/.packerconfig
-2019/01/30 06:15:50 packer: 2019/01/30 06:15:50 [WARN] Config file doesn't exist: /home/u014cxf/.packerconfig
-2019/01/30 06:15:50 packer: 2019/01/30 06:15:50 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
-2019/01/30 06:15:50 packer: 2019/01/30 06:15:50 Detected home directory from env var: /home/u014cxf
-2019/01/30 06:15:50 packer: 2019/01/30 06:15:50 Setting cache directory: /home/u014cxf/packer/packer_cache
-2019/01/30 06:15:50 packer: 2019/01/30 06:15:50 args: []string{"packer-provisioner-powershell"}
-2019/01/30 06:15:50 packer: 2019/01/30 06:15:50 Detected home directory from env var: /home/u014cxf
-2019/01/30 06:15:50 packer: 2019/01/30 06:15:50 Plugin minimum port: 10000
-2019/01/30 06:15:50 packer: 2019/01/30 06:15:50 Plugin maximum port: 25000
-2019/01/30 06:15:50 packer: 2019/01/30 06:15:50 Plugin address: unix /tmp/packer-plugin675680435
-2019/01/30 06:15:50 packer: 2019/01/30 06:15:50 Waiting for connection...
-2019/01/30 06:15:50 packer: 2019/01/30 06:15:50 Serving a plugin connection...
-2019/01/30 06:15:50 ui: [1;32mvsphere-iso output will be in this color.[0m
-2019/01/30 06:15:50 ui: 
-2019/01/30 06:15:50 Build debug mode: false
-2019/01/30 06:15:50 Force build: false
-2019/01/30 06:15:50 On error: 
-2019/01/30 06:15:50 Preparing build: vsphere-iso
-2019/01/30 06:15:51 Waiting on builds to complete...
-2019/01/30 06:15:51 Starting build run: vsphere-iso
-2019/01/30 06:15:51 Running builder: vsphere-iso
-2019/01/30 06:15:51 [INFO] (telemetry) Starting builder vsphere-iso
-2019/01/30 06:15:51 ui: [1;32m==> vsphere-iso: Creating VM...[0m
-2019/01/30 06:15:52 ui: [1;32m==> vsphere-iso: Customizing hardware...[0m
-2019/01/30 06:15:53 ui: [1;32m==> vsphere-iso: Mount ISO images...[0m
-2019/01/30 06:15:53 ui: [1;32m==> vsphere-iso: Creating floppy disk...[0m
-2019/01/30 06:15:53 packer-builder-vsphere-iso.linux: 2019/01/30 06:15:53 Floppy path: /tmp/packer374419505
-2019/01/30 06:15:53 packer-builder-vsphere-iso.linux: 2019/01/30 06:15:53 Initializing block device backed by temporary file
-2019/01/30 06:15:53 packer-builder-vsphere-iso.linux: 2019/01/30 06:15:53 Formatting the block device with a FAT filesystem...
-2019/01/30 06:15:53 packer-builder-vsphere-iso.linux: 2019/01/30 06:15:53 Initializing FAT filesystem on block device
-2019/01/30 06:15:53 packer-builder-vsphere-iso.linux: 2019/01/30 06:15:53 Reading the root directory from the filesystem
-2019/01/30 06:15:53 ui: [0;32m    vsphere-iso: Copying files flatly from floppy_files[0m
-2019/01/30 06:15:53 ui: [0;32m    vsphere-iso: Copying file: ./answer_files/AutoUnattend.xml[0m
-2019/01/30 06:15:53 ui: [0;32m    vsphere-iso: Copying file: ./scripts/post_deploy.cmd[0m
-2019/01/30 06:15:53 ui: [0;32m    vsphere-iso: Copying file: ./scripts/base.cmd[0m
-2019/01/30 06:15:53 ui: [0;32m    vsphere-iso: Copying file: ./scripts/winrm.ps1[0m
-2019/01/30 06:15:53 ui: [0;32m    vsphere-iso: Copying file: ./scripts/sceregvl.inf[0m
-2019/01/30 06:15:53 ui: [0;32m    vsphere-iso: Copying file: ./scripts/changeCDdrive.ps1[0m
-2019/01/30 06:15:53 ui: [0;32m    vsphere-iso: Copying file: ./scripts/sysprepspecialize.cmd[0m
-2019/01/30 06:15:53 ui: [0;32m    vsphere-iso: Copying file: ./scripts/win-updates.ps1[0m
-2019/01/30 06:15:53 ui: [0;32m    vsphere-iso: Copying file: ./scripts/Win2016Features.ps1[0m
-2019/01/30 06:15:53 ui: [0;32m    vsphere-iso: Done copying files from floppy_files[0m
-2019/01/30 06:15:53 ui: [0;32m    vsphere-iso: Collecting paths from floppy_dirs[0m
-2019/01/30 06:15:53 ui: [0;32m    vsphere-iso: Resulting paths from floppy_dirs : [][0m
-2019/01/30 06:15:53 ui: [0;32m    vsphere-iso: Done copying paths from floppy_dirs[0m
-2019/01/30 06:15:53 ui: [1;32m==> vsphere-iso: Uploading created floppy image[0m
-2019/01/30 06:15:54 ui: [1;32m==> vsphere-iso: Adding generated Floppy...[0m
-2019/01/30 06:15:55 ui: [1;32m==> vsphere-iso: Adding Floppy image...[0m
-2019/01/30 06:15:55 ui: [1;32m==> vsphere-iso: Set boot order temporary...[0m
-2019/01/30 06:15:55 ui: [1;32m==> vsphere-iso: Power on VM...[0m
-2019/01/30 06:15:56 ui: [1;32m==> vsphere-iso: Waiting 6m0s for boot...[0m
-2019/01/30 06:21:56 ui: [1;32m==> vsphere-iso: Typing boot command...[0m
-2019/01/30 06:21:56 ui: [1;32m==> vsphere-iso: Waiting for IP...[0m
-2019/01/30 06:23:55 ui: [1;32m==> vsphere-iso: IP address: 10.213.4.198[0m
-2019/01/30 06:23:55 packer-builder-vsphere-iso.linux: 2019/01/30 06:23:55 Waiting for WinRM, up to timeout: 30m0s
-2019/01/30 06:23:55 ui: [1;32m==> vsphere-iso: Waiting for WinRM to become available...[0m
-2019/01/30 06:24:00 packer-builder-vsphere-iso.linux: 2019/01/30 06:24:00 [INFO] Attempting WinRM connection...
-2019/01/30 06:24:00 packer-builder-vsphere-iso.linux: 2019/01/30 06:24:00 [DEBUG] connecting to remote shell using WinRM
-2019/01/30 06:24:09 packer-builder-vsphere-iso.linux: 2019/01/30 06:24:09 Checking that WinRM is connected with: 'powershell.exe -EncodedCommand aQBmACAAKABUAGUAcwB0AC0AUABhAHQAaAAgAHYAYQByAGkAYQBiAGwAZQA6AGcAbABvAGIAYQBsADoAUAByAG8AZwByAGUAcwBzAFAAcgBlAGYAZQByAGUAbgBjAGUAKQB7ACQAUAByAG8AZwByAGUAcwBzAFAAcgBlAGYAZQByAGUAbgBjAGUAPQAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwB9ADsAIABlAGMAaABvACAAIgBXAGkAbgBSAE0AIABjAG8AbgBuAGUAYwB0AGUAZAAuACIA'
-2019/01/30 06:24:11 packer-builder-vsphere-iso.linux: 2019/01/30 06:24:11 [INFO] starting remote command: powershell.exe -EncodedCommand aQBmACAAKABUAGUAcwB0AC0AUABhAHQAaAAgAHYAYQByAGkAYQBiAGwAZQA6AGcAbABvAGIAYQBsADoAUAByAG8AZwByAGUAcwBzAFAAcgBlAGYAZQByAGUAbgBjAGUAKQB7ACQAUAByAG8AZwByAGUAcwBzAFAAcgBlAGYAZQByAGUAbgBjAGUAPQAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwB9ADsAIABlAGMAaABvACAAIgBXAGkAbgBSAE0AIABjAG8AbgBuAGUAYwB0AGUAZAAuACIA
-2019/01/30 06:24:19 packer-builder-vsphere-iso.linux: 2019/01/30 06:24:19 [INFO] command 'powershell.exe -EncodedCommand aQBmACAAKABUAGUAcwB0AC0AUABhAHQAaAAgAHYAYQByAGkAYQBiAGwAZQA6AGcAbABvAGIAYQBsADoAUAByAG8AZwByAGUAcwBzAFAAcgBlAGYAZQByAGUAbgBjAGUAKQB7ACQAUAByAG8AZwByAGUAcwBzAFAAcgBlAGYAZQByAGUAbgBjAGUAPQAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwB9ADsAIABlAGMAaABvACAAIgBXAGkAbgBSAE0AIABjAG8AbgBuAGUAYwB0AGUAZAAuACIA' exited with code: 0
-2019/01/30 06:24:19 ui: [0;32m    vsphere-iso: WinRM connected.[0m
-2019/01/30 06:24:19 ui: [0;32m    vsphere-iso: #< CLIXML[0m
-2019/01/30 06:24:19 ui: [0;32m    vsphere-iso: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj><Obj S="progress" RefId="1"><TNRef RefId="0" /><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>[0m
-2019/01/30 06:24:19 packer-builder-vsphere-iso.linux: 2019/01/30 06:24:19 Connected to machine
-2019/01/30 06:24:19 ui: [1;32m==> vsphere-iso: Connected to WinRM![0m
-2019/01/30 06:24:19 packer-builder-vsphere-iso.linux: 2019/01/30 06:24:19 Running the provision hook
-2019/01/30 06:24:19 [INFO] (telemetry) Starting provisioner powershell
-2019/01/30 06:24:19 ui: [1;32m==> vsphere-iso: Provisioning with Powershell...[0m
-2019/01/30 06:24:19 ui: [1;32m==> vsphere-iso: Provisioning with powershell script: scripts/win-updates.ps1[0m
-2019/01/30 06:24:19 packer: 2019/01/30 06:24:19 Opening scripts/win-updates.ps1 for reading
-2019/01/30 06:24:19 packer: 2019/01/30 06:24:19 Uploading env vars to c:/Windows/Temp/packer-ps-env-vars-5c51b197-dacc-4d61-dd45-595ed0b39d2f.ps1
-2019/01/30 06:24:19 packer: 2019/01/30 06:24:19 [INFO] 78 bytes written for 'uploadData'
-2019/01/30 06:24:19 [INFO] 78 bytes written for 'uploadData'
-2019/01/30 06:24:24 packer-builder-vsphere-iso.linux: 2019/01/30 06:24:24 Uploading file to 'c:/Windows/Temp/packer-ps-env-vars-5c51b197-dacc-4d61-dd45-595ed0b39d2f.ps1'
-2019/01/30 06:24:26 packer-builder-vsphere-iso.linux: #< CLIXML
-2019/01/30 06:24:27 packer-builder-vsphere-iso.linux: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>#< CLIXML
-2019/01/30 06:24:27 packer: 2019/01/30 06:24:27 Building elevated command wrapper for: powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-5c51b197-dacc-4d61-dd45-595ed0b39d2f.ps1; &'c:/Windows/Temp/script-5c51b197-f67b-e854-5b7a-46346397bbfa.ps1'; exit $LastExitCode }"
-2019/01/30 06:24:27 packer: 2019/01/30 06:24:27 Command [powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-5c51b197-dacc-4d61-dd45-595ed0b39d2f.ps1; &'c:/Windows/Temp/script-5c51b197-f67b-e854-5b7a-46346397bbfa.ps1'; exit $LastExitCode }" > %SYSTEMROOT%/Temp/packer-5c51b39b-09df-b39c-f707-5beaefbbc492.out 2>&1] converted to [powershell -executionpolicy bypass &#34;&amp; { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value &#39;SilentlyContinue&#39;};. c:/Windows/Temp/packer-ps-env-vars-5c51b197-dacc-4d61-dd45-595ed0b39d2f.ps1; &amp;&#39;c:/Windows/Temp/script-5c51b197-f67b-e854-5b7a-46346397bbfa.ps1&#39;; exit $LastExitCode }&#34; &gt; %SYSTEMROOT%/Temp/packer-5c51b39b-09df-b39c-f707-5beaefbbc492.out 2&gt;&amp;1] for use in XML string
-2019/01/30 06:24:27 packer: 2019/01/30 06:24:27 Uploading elevated shell wrapper for command [powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-5c51b197-dacc-4d61-dd45-595ed0b39d2f.ps1; &'c:/Windows/Temp/script-5c51b197-f67b-e854-5b7a-46346397bbfa.ps1'; exit $LastExitCode }" > %SYSTEMROOT%/Temp/packer-5c51b39b-09df-b39c-f707-5beaefbbc492.out 2>&1] to [C:/Windows/Temp/packer-elevated-shell-5c51b39b-43d9-8824-4a60-c76405371640.ps1]
-2019/01/30 06:24:27 packer: 2019/01/30 06:24:27 [INFO] 3210 bytes written for 'uploadData'
-2019/01/30 06:24:27 [INFO] 3210 bytes written for 'uploadData'
-2019/01/30 06:24:32 packer-builder-vsphere-iso.linux: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>2019/01/30 06:24:32 Uploading file to 'C:/Windows/Temp/packer-elevated-shell-5c51b39b-43d9-8824-4a60-c76405371640.ps1'
-2019/01/30 06:24:33 packer-builder-vsphere-iso.linux: #< CLIXML
-2019/01/30 06:24:35 packer-builder-vsphere-iso.linux: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>#< CLIXML
-2019/01/30 06:24:37 packer: 2019/01/30 06:24:37 [INFO] 8564 bytes written for 'uploadData'
-2019/01/30 06:24:37 [INFO] 8564 bytes written for 'uploadData'
-2019/01/30 06:24:42 packer-builder-vsphere-iso.linux: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>2019/01/30 06:24:42 Uploading file to 'c:/Windows/Temp/script-5c51b197-f67b-e854-5b7a-46346397bbfa.ps1'
-2019/01/30 06:24:52 packer-builder-vsphere-iso.linux: #< CLIXML
-2019/01/30 06:24:53 packer-builder-vsphere-iso.linux: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>#< CLIXML
-2019/01/30 06:24:53 packer-builder-vsphere-iso.linux: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>2019/01/30 06:24:53 [INFO] starting remote command: powershell -executionpolicy bypass -file "C:/Windows/Temp/packer-elevated-shell-5c51b39b-43d9-8824-4a60-c76405371640.ps1"
-2019/01/30 06:25:00 ui: [0;32m    vsphere-iso: Checking For Windows Updates[0m
-2019/01/30 06:25:00 ui: [0;32m    vsphere-iso: Script:[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: There are 4 more updates.[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: 2018-05 Cumulative Update for Windows Server 2016 for x64-based Systems (KB4103720)[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: Install this update to resolve issues in Windows. For a complete listing of the issues that are included in this update, see the associated Microsoft Knowledge Base article for more information. After you install this item, you may have to restart your computer.[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: False[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: True[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: 2018-05 Update for Windows Server 2016 for x64-based Systems (KB4132216)[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: Install this update to resolve issues in Windows. For a complete listing of the issues that are included in this update, see the associated Microsoft Knowledge Base article for more information. After you install this item, you may have to restart your computer.[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: False[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: True[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: Windows Malicious Software Removal Tool x64 - January 2019 (KB890830)[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: After the download, this tool runs one time to check your computer for infection by specific, prevalent malicious software (including Blaster, Sasser, and Mydoom) and helps remove any infection that is found. If an infection is found, the tool will display a status report the next time that you start your computer. A new version of the tool will be offered every month. If you want to manually run the tool on your computer, you can download a copy from the Microsoft Download Center, or you can run an online version from microsoft.com. This tool is not a replacement for an antivirus product. To help protect your computer, you should use an antivirus product.[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: False[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: True[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: Definition Update for Windows Defender Antivirus - KB2267602 (Definition 1.285.486.0)[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: Install this update to revise the definition files that are used to detect viruses, spyware, and other potentially unwanted software. Once you have installed this item, it cannot be removed.[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: False[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: True[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: Evaluating Available Updates with limit of 500:[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: Adding: 2018-05 Cumulative Update for Windows Server 2016 for x64-based Systems (KB4103720)[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: Adding: 2018-05 Update for Windows Server 2016 for x64-based Systems (KB4132216)[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: Adding: Windows Malicious Software Removal Tool x64 - January 2019 (KB890830)[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: Adding: Definition Update for Windows Defender Antivirus - KB2267602 (Definition 1.285.486.0)[0m
-2019/01/30 06:31:37 ui: [0;32m    vsphere-iso: Downloading Updates...[0m
-2019/01/30 06:33:58 ui: [0;32m    vsphere-iso:[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: HResult ResultCode[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: ------- ----------[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso:       0          2[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: The following updates are downloaded and ready to be installed:[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: > 2018-05 Cumulative Update for Windows Server 2016 for x64-based Systems (KB4103720)[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: > 2018-05 Update for Windows Server 2016 for x64-based Systems (KB4132216)[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: > Windows Malicious Software Removal Tool x64 - January 2019 (KB890830)[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: > Definition Update for Windows Defender Antivirus - KB2267602 (Definition 1.285.486.0)[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: These updates may require a reboot[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: Installing updates...[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: Installation Result: 2[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: Reboot Required: True[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: Listing of updates installed and individual installation results:[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso:[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: Item: 2018-05 Cumulative Update for Windows Server 2016 for x64-based Systems (KB4103720)[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: Result: 2[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso:[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: Item: 2018-05 Update for Windows Server 2016 for x64-based Systems (KB4132216)[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: Result: 2[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso:[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: Item: Windows Malicious Software Removal Tool x64 - January 2019 (KB890830)[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: Result: 2[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso:[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: Item: Definition Update for Windows Defender Antivirus - KB2267602 (Definition 1.285.486.0)[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: Result: 2[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: Restart Registry Entry Does Not Exist - Creating It[0m
-2019/01/30 06:54:56 ui: [0;32m    vsphere-iso: Restart Required - Restarting...[0m
-2019/01/30 06:54:57 ui: [0;32m    vsphere-iso: Restart-Computer : Failed to restart the computer CWTCWT-F41F431E with the following error message: The system[0m
-2019/01/30 06:54:57 ui: [0;32m    vsphere-iso: shutdown cannot be initiated because there are other users logged on to the computer.[0m
-2019/01/30 06:54:57 ui: [0;32m    vsphere-iso: At C:\Windows\Temp\script-5c51b197-f67b-e854-5b7a-46346397bbfa.ps1:50 char:13[0m
-2019/01/30 06:54:57 ui: [0;32m    vsphere-iso: +             Restart-Computer[0m
-2019/01/30 06:54:57 ui: [0;32m    vsphere-iso: +             ~~~~~~~~~~~~~~~~[0m
-2019/01/30 06:54:57 ui: [0;32m    vsphere-iso:     + CategoryInfo          : OperationStopped: (CWTCWT-F41F431E:String) [Restart-Computer], InvalidOperationException[0m
-2019/01/30 06:54:57 ui: [0;32m    vsphere-iso:     + FullyQualifiedErrorId : RestartcomputerFailed,Microsoft.PowerShell.Commands.RestartComputerCommand[0m
-2019/01/30 06:54:57 ui: [0;32m    vsphere-iso:[0m
-2019/01/30 06:54:57 [INFO] 3993 bytes written for 'stdout'
-2019/01/30 06:54:57 [INFO] 0 bytes written for 'stderr'
-2019/01/30 06:54:57 [INFO] RPC client: Communicator ended with: 0
-2019/01/30 06:54:57 [INFO] RPC endpoint: Communicator ended with: 0
-2019/01/30 06:54:57 packer-builder-vsphere-iso.linux: 2019/01/30 06:54:57 [INFO] command 'powershell -executionpolicy bypass -file "C:/Windows/Temp/packer-elevated-shell-5c51b39b-43d9-8824-4a60-c76405371640.ps1"' exited with code: 0
-2019/01/30 06:54:57 packer-builder-vsphere-iso.linux: 2019/01/30 06:54:57 [INFO] RPC endpoint: Communicator ended with: 0
-2019/01/30 06:54:57 packer: 2019/01/30 06:54:57 [INFO] 3993 bytes written for 'stdout'
-2019/01/30 06:54:57 packer: 2019/01/30 06:54:57 [INFO] 0 bytes written for 'stderr'
-2019/01/30 06:54:57 packer: 2019/01/30 06:54:57 [INFO] RPC client: Communicator ended with: 0
-2019/01/30 06:54:57 [INFO] (telemetry) ending powershell
-2019/01/30 06:54:57 ui: [1;32m==> vsphere-iso: Shut down VM...[0m
-2019/01/30 06:54:58 packer-builder-vsphere-iso.linux: 2019/01/30 06:54:58 Waiting max 5m0s for shutdown to complete
-2019/01/30 06:59:58 ui: [1;32m==> vsphere-iso: Clear boot order...[0m
-2019/01/30 06:59:58 ui: [1;32m==> vsphere-iso: Deleting Floppy image ...[0m
-2019/01/30 07:00:02 packer-builder-vsphere-iso.linux: 2019/01/30 07:00:02 Deleting floppy disk: /tmp/packer374419505
-2019/01/30 07:00:02 ui: [1;32m==> vsphere-iso: Destroying VM...[0m
-2019/01/30 07:00:02 ui error: [1;31m==> vsphere-iso: The attempted operation cannot be performed in the current state (Powered on).[0m
-2019/01/30 07:00:02 packer-builder-vsphere-iso.linux: panic: interface conversion: interface is nil, not error
-2019/01/30 07:00:02 packer-builder-vsphere-iso.linux: 
-2019/01/30 07:00:02 packer-builder-vsphere-iso.linux: goroutine 94 [running]:
-2019/01/30 07:00:02 packer-builder-vsphere-iso.linux: github.com/jetbrains-infra/packer-builder-vsphere/iso.(*Builder).Run(0xc4201479a0, 0x11dd540, 0xc42000ad80, 0x11d85c0, 0xc42038c840, 0x11dc9c0, 0xc42000c128, 0x4b688c, 0xe06780, 0xe06780, ...)
-2019/01/30 07:00:02 packer-builder-vsphere-iso.linux: 	/mnt/agent/work/69eebf6324555ecb/src/github.com/jetbrains-infra/packer-builder-vsphere/iso/builder.go:103 +0xc34
-2019/01/30 07:00:02 packer-builder-vsphere-iso.linux: github.com/jetbrains-infra/packer-builder-vsphere/vendor/github.com/hashicorp/packer/packer/rpc.(*BuilderServer).Run(0xc4201479c0, 0x1, 0xc420032830, 0x0, 0x0)
-2019/01/30 07:00:02 packer-builder-vsphere-iso.linux: 	/mnt/agent/work/69eebf6324555ecb/src/github.com/jetbrains-infra/packer-builder-vsphere/vendor/github.com/hashicorp/packer/packer/rpc/builder.go:94 +0x1ce
-2019/01/30 07:00:02 packer-builder-vsphere-iso.linux: reflect.Value.call(0xc4200888a0, 0xc42009c5d8, 0x13, 0x10e3267, 0x4, 0xc42006cf18, 0x3, 0x3, 0xc420078940, 0xc420001e88, ...)
-2019/01/30 07:00:02 packer-builder-vsphere-iso.linux: 	/usr/local/go/src/reflect/value.go:447 +0x969
-2019/01/30 07:00:02 packer-builder-vsphere-iso.linux: reflect.Value.Call(0xc4200888a0, 0xc42009c5d8, 0x13, 0xc420055718, 0x3, 0x3, 0x1, 0x54344e, 0x1)
-2019/01/30 07:00:02 packer-builder-vsphere-iso.linux: 	/usr/local/go/src/reflect/value.go:308 +0xa4
-2019/01/30 07:00:02 packer-builder-vsphere-iso.linux: net/rpc.(*service).call(0xc4202c6040, 0xc42009e870, 0xc420098b98, 0xc420098ba0, 0xc4200aea00, 0xc42000a2c0, 0xe33380, 0xc42003282c, 0x18a, 0xe06780, ...)
-2019/01/30 07:00:02 packer-builder-vsphere-iso.linux: 	/usr/local/go/src/net/rpc/server.go:384 +0x14e
-2019/01/30 07:00:02 packer-builder-vsphere-iso.linux: created by net/rpc.(*Server).ServeCodec
-2019/01/30 07:00:02 packer-builder-vsphere-iso.linux: 	/usr/local/go/src/net/rpc/server.go:480 +0x43a
-2019/01/30 07:00:02 [INFO] (telemetry) ending vsphere-iso
-2019/01/30 07:00:02 ui error: [1;31mBuild 'vsphere-iso' errored: unexpected EOF[0m
-2019/01/30 07:00:02 /home/u014cxf/.packer.d/plugins/packer-builder-vsphere-iso.linux: plugin process exited
-2019/01/30 07:00:02 Builds completed. Waiting on interrupt barrier...
-2019/01/30 07:00:02 machine readable: error-count []string{"1"}
-2019/01/30 07:00:02 ui error: 
-==> Some builds didn't complete successfully and had errors:
-2019/01/30 07:00:02 machine readable: vsphere-iso,error []string{"unexpected EOF"}
-2019/01/30 07:00:02 ui error: --> vsphere-iso: unexpected EOF
-2019/01/30 07:00:02 ui: 
-==> Builds finished but no artifacts were created.
-2019/01/30 07:00:02 [INFO] (telemetry) Finalizing.
-2019/01/30 07:00:03 waiting for all plugin processes to complete...
-2019/01/30 07:00:03 /usr/local/bin/packer: plugin process exited
+2019/02/15 13:05:17 [INFO] Packer version: 1.3.3
+2019/02/15 13:05:17 Packer Target OS/Arch: linux amd64
+2019/02/15 13:05:17 Built with Go Version: go1.11.2
+2019/02/15 13:05:17 Detected home directory from env var: /home/u014cxf
+2019/02/15 13:05:17 [DEBUG] Discovered plugin: vsphere-clone = /home/u014cxf/.packer.d/plugins/packer-builder-vsphere-clone.linux
+2019/02/15 13:05:17 [DEBUG] Discovered plugin: vsphere-iso = /home/u014cxf/.packer.d/plugins/packer-builder-vsphere-iso.linux
+2019/02/15 13:05:17 Using internal plugin for profitbricks
+2019/02/15 13:05:17 Using internal plugin for qemu
+2019/02/15 13:05:17 Using internal plugin for scaleway
+2019/02/15 13:05:17 Using internal plugin for vmware-vmx
+2019/02/15 13:05:17 Using internal plugin for amazon-ebssurrogate
+2019/02/15 13:05:17 Using internal plugin for googlecompute
+2019/02/15 13:05:17 Using internal plugin for ncloud
+2019/02/15 13:05:17 Using internal plugin for amazon-ebsvolume
+2019/02/15 13:05:17 Using internal plugin for file
+2019/02/15 13:05:17 Using internal plugin for lxc
+2019/02/15 13:05:17 Using internal plugin for oracle-classic
+2019/02/15 13:05:17 Using internal plugin for virtualbox-ovf
+2019/02/15 13:05:17 Using internal plugin for alicloud-ecs
+2019/02/15 13:05:17 Using internal plugin for amazon-chroot
+2019/02/15 13:05:17 Using internal plugin for hyperv-vmcx
+2019/02/15 13:05:17 Using internal plugin for oracle-oci
+2019/02/15 13:05:17 Using internal plugin for parallels-iso
+2019/02/15 13:05:17 Using internal plugin for cloudstack
+2019/02/15 13:05:17 Using internal plugin for oneandone
+2019/02/15 13:05:17 Using internal plugin for parallels-pvm
+2019/02/15 13:05:17 Using internal plugin for triton
+2019/02/15 13:05:17 Using internal plugin for azure-arm
+2019/02/15 13:05:17 Using internal plugin for docker
+2019/02/15 13:05:17 Using internal plugin for hcloud
+2019/02/15 13:05:17 Using internal plugin for openstack
+2019/02/15 13:05:17 Using internal plugin for vmware-iso
+2019/02/15 13:05:17 Using internal plugin for amazon-ebs
+2019/02/15 13:05:17 Using internal plugin for amazon-instance
+2019/02/15 13:05:17 Using internal plugin for hyperv-iso
+2019/02/15 13:05:17 Using internal plugin for null
+2019/02/15 13:05:17 Using internal plugin for digitalocean
+2019/02/15 13:05:17 Using internal plugin for lxd
+2019/02/15 13:05:17 Using internal plugin for virtualbox-iso
+2019/02/15 13:05:17 Using internal plugin for breakpoint
+2019/02/15 13:05:17 Using internal plugin for chef-solo
+2019/02/15 13:05:17 Using internal plugin for puppet-masterless
+2019/02/15 13:05:17 Using internal plugin for puppet-server
+2019/02/15 13:05:17 Using internal plugin for shell-local
+2019/02/15 13:05:17 Using internal plugin for windows-shell
+2019/02/15 13:05:17 Using internal plugin for ansible-local
+2019/02/15 13:05:17 Using internal plugin for windows-restart
+2019/02/15 13:05:17 Using internal plugin for converge
+2019/02/15 13:05:17 Using internal plugin for powershell
+2019/02/15 13:05:17 Using internal plugin for salt-masterless
+2019/02/15 13:05:17 Using internal plugin for shell
+2019/02/15 13:05:17 Using internal plugin for ansible
+2019/02/15 13:05:17 Using internal plugin for file
+2019/02/15 13:05:17 Using internal plugin for chef-client
+2019/02/15 13:05:17 Using internal plugin for shell-local
+2019/02/15 13:05:17 Using internal plugin for vagrant
+2019/02/15 13:05:17 Using internal plugin for vagrant-cloud
+2019/02/15 13:05:17 Using internal plugin for vsphere
+2019/02/15 13:05:17 Using internal plugin for vsphere-template
+2019/02/15 13:05:17 Using internal plugin for alicloud-import
+2019/02/15 13:05:17 Using internal plugin for checksum
+2019/02/15 13:05:17 Using internal plugin for docker-import
+2019/02/15 13:05:17 Using internal plugin for docker-save
+2019/02/15 13:05:17 Using internal plugin for docker-push
+2019/02/15 13:05:17 Using internal plugin for docker-tag
+2019/02/15 13:05:17 Using internal plugin for googlecompute-export
+2019/02/15 13:05:17 Using internal plugin for amazon-import
+2019/02/15 13:05:17 Using internal plugin for artifice
+2019/02/15 13:05:17 Using internal plugin for manifest
+2019/02/15 13:05:17 Using internal plugin for compress
+2019/02/15 13:05:17 Using internal plugin for googlecompute-import
+2019/02/15 13:05:17 Detected home directory from env var: /home/u014cxf
+2019/02/15 13:05:17 Attempting to open config file: /home/u014cxf/.packerconfig
+2019/02/15 13:05:17 [WARN] Config file doesn't exist: /home/u014cxf/.packerconfig
+2019/02/15 13:05:17 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[lxc:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-lxc oracle-oci:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oracle-oci vsphere-clone:/home/u014cxf/.packer.d/plugins/packer-builder-vsphere-clone.linux profitbricks:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-profitbricks scaleway:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-scaleway vmware-vmx:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-vmx amazon-ebsvolume:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebsvolume amazon-instance:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-instance lxd:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-lxd cloudstack:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-cloudstack azure-arm:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-azure-arm hyperv-iso:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperv-iso oneandone:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oneandone openstack:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-openstack parallels-iso:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-iso docker:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-docker digitalocean:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-digitalocean vsphere-iso:/home/u014cxf/.packer.d/plugins/packer-builder-vsphere-iso.linux qemu:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-qemu amazon-ebssurrogate:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebssurrogate oracle-classic:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-oracle-classic virtualbox-ovf:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-ovf amazon-ebs:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-ebs virtualbox-iso:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-virtualbox-iso file:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-file alicloud-ecs:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-alicloud-ecs amazon-chroot:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-amazon-chroot parallels-pvm:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-parallels-pvm hcloud:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hcloud null:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-null googlecompute:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-googlecompute ncloud:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-ncloud hyperv-vmcx:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-hyperv-vmcx triton:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-triton vmware-iso:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-builder-vmware-iso] PostProcessors:map[alicloud-import:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-alicloud-import checksum:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-checksum googlecompute-export:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-googlecompute-export shell-local:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-shell-local vagrant:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant googlecompute-import:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-googlecompute-import vagrant-cloud:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vagrant-cloud docker-save:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-save amazon-import:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-amazon-import artifice:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-artifice vsphere:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vsphere vsphere-template:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-vsphere-template docker-import:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-import docker-push:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-push docker-tag:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-docker-tag manifest:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-manifest compress:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-post-processor-compress] Provisioners:map[ansible-local:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible-local windows-restart:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-restart converge:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-converge ansible:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-ansible puppet-masterless:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-masterless shell:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell file:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-file chef-client:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-client chef-solo:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-chef-solo breakpoint:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-breakpoint shell-local:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-shell-local windows-shell:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-windows-shell powershell:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-powershell salt-masterless:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-salt-masterless puppet-server:/usr/local/bin/packer-PACKERSPACE-plugin-PACKERSPACE-packer-provisioner-puppet-server]}
+2019/02/15 13:05:17 Detected home directory from env var: /home/u014cxf
+2019/02/15 13:05:17 Setting cache directory: /home/u014cxf/packer/packer_cache
+2019/02/15 13:05:17 Loading builder: vsphere-iso
+2019/02/15 13:05:17 Creating plugin client for path: /home/u014cxf/.packer.d/plugins/packer-builder-vsphere-iso.linux
+2019/02/15 13:05:17 Starting plugin: /home/u014cxf/.packer.d/plugins/packer-builder-vsphere-iso.linux []string{"/home/u014cxf/.packer.d/plugins/packer-builder-vsphere-iso.linux"}
+2019/02/15 13:05:17 Waiting for RPC address for: /home/u014cxf/.packer.d/plugins/packer-builder-vsphere-iso.linux
+2019/02/15 13:05:17 Detected home directory from env var: /home/u014cxf
+2019/02/15 13:05:17 packer-builder-vsphere-iso.linux: 2019/02/15 13:05:17 Plugin minimum port: 10000
+2019/02/15 13:05:17 packer-builder-vsphere-iso.linux: 2019/02/15 13:05:17 Plugin maximum port: 25000
+2019/02/15 13:05:17 packer-builder-vsphere-iso.linux: 2019/02/15 13:05:17 Plugin address: unix /tmp/packer-plugin600186777
+2019/02/15 13:05:17 packer-builder-vsphere-iso.linux: 2019/02/15 13:05:17 Waiting for connection...
+2019/02/15 13:05:17 packer-builder-vsphere-iso.linux: 2019/02/15 13:05:17 Serving a plugin connection...
+2019/02/15 13:05:17 Loading provisioner: windows-restart
+2019/02/15 13:05:17 Plugin could not be found. Checking same directory as executable.
+2019/02/15 13:05:17 Current exe path: /usr/local/bin/packer
+2019/02/15 13:05:17 Creating plugin client for path: /usr/local/bin/packer
+2019/02/15 13:05:17 Starting plugin: /usr/local/bin/packer []string{"/usr/local/bin/packer", "plugin", "packer-provisioner-windows-restart"}
+2019/02/15 13:05:17 Waiting for RPC address for: /usr/local/bin/packer
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 [INFO] Packer version: 1.3.3
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Packer Target OS/Arch: linux amd64
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Built with Go Version: go1.11.2
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Detected home directory from env var: /home/u014cxf
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Attempting to open config file: /home/u014cxf/.packerconfig
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 [WARN] Config file doesn't exist: /home/u014cxf/.packerconfig
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Detected home directory from env var: /home/u014cxf
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Setting cache directory: /home/u014cxf/packer/packer_cache
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 args: []string{"packer-provisioner-windows-restart"}
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Detected home directory from env var: /home/u014cxf
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Plugin minimum port: 10000
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Plugin maximum port: 25000
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Plugin address: unix /tmp/packer-plugin258872803
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Waiting for connection...
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Serving a plugin connection...
+2019/02/15 13:05:17 Loading provisioner: file
+2019/02/15 13:05:17 Plugin could not be found. Checking same directory as executable.
+2019/02/15 13:05:17 Current exe path: /usr/local/bin/packer
+2019/02/15 13:05:17 Creating plugin client for path: /usr/local/bin/packer
+2019/02/15 13:05:17 Starting plugin: /usr/local/bin/packer []string{"/usr/local/bin/packer", "plugin", "packer-provisioner-file"}
+2019/02/15 13:05:17 Waiting for RPC address for: /usr/local/bin/packer
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 [INFO] Packer version: 1.3.3
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Packer Target OS/Arch: linux amd64
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Built with Go Version: go1.11.2
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Detected home directory from env var: /home/u014cxf
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Attempting to open config file: /home/u014cxf/.packerconfig
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 [WARN] Config file doesn't exist: /home/u014cxf/.packerconfig
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Detected home directory from env var: /home/u014cxf
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Setting cache directory: /home/u014cxf/packer/packer_cache
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 args: []string{"packer-provisioner-file"}
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Plugin minimum port: 10000
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Plugin maximum port: 25000
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Detected home directory from env var: /home/u014cxf
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Plugin address: unix /tmp/packer-plugin881527952
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Waiting for connection...
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Serving a plugin connection...
+2019/02/15 13:05:17 Loading provisioner: powershell
+2019/02/15 13:05:17 Plugin could not be found. Checking same directory as executable.
+2019/02/15 13:05:17 Current exe path: /usr/local/bin/packer
+2019/02/15 13:05:17 Creating plugin client for path: /usr/local/bin/packer
+2019/02/15 13:05:17 Starting plugin: /usr/local/bin/packer []string{"/usr/local/bin/packer", "plugin", "packer-provisioner-powershell"}
+2019/02/15 13:05:17 Waiting for RPC address for: /usr/local/bin/packer
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 [INFO] Packer version: 1.3.3
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Packer Target OS/Arch: linux amd64
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Built with Go Version: go1.11.2
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Detected home directory from env var: /home/u014cxf
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Attempting to open config file: /home/u014cxf/.packerconfig
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 [WARN] Config file doesn't exist: /home/u014cxf/.packerconfig
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Packer config: &{DisableCheckpoint:false DisableCheckpointSignature:false PluginMinPort:10000 PluginMaxPort:25000 Builders:map[] PostProcessors:map[] Provisioners:map[]}
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Detected home directory from env var: /home/u014cxf
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Setting cache directory: /home/u014cxf/packer/packer_cache
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 args: []string{"packer-provisioner-powershell"}
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Plugin minimum port: 10000
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Plugin maximum port: 25000
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Plugin address: unix /tmp/packer-plugin985268497
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Waiting for connection...
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Detected home directory from env var: /home/u014cxf
+2019/02/15 13:05:17 packer: 2019/02/15 13:05:17 Serving a plugin connection...
+2019/02/15 13:05:17 ui: [1;32mvsphere-iso output will be in this color.[0m
+2019/02/15 13:05:17 ui: 
+2019/02/15 13:05:17 Build debug mode: false
+2019/02/15 13:05:17 Force build: false
+2019/02/15 13:05:17 On error: 
+2019/02/15 13:05:17 Preparing build: vsphere-iso
+2019/02/15 13:05:17 Waiting on builds to complete...
+2019/02/15 13:05:17 Starting build run: vsphere-iso
+2019/02/15 13:05:17 Running builder: vsphere-iso
+2019/02/15 13:05:17 [INFO] (telemetry) Starting builder vsphere-iso
+2019/02/15 13:05:18 ui: [1;32m==> vsphere-iso: Creating VM...[0m
+2019/02/15 13:05:20 ui: [1;32m==> vsphere-iso: Customizing hardware...[0m
+2019/02/15 13:05:20 ui: [1;32m==> vsphere-iso: Mount ISO images...[0m
+2019/02/15 13:05:21 ui: [1;32m==> vsphere-iso: Creating floppy disk...[0m
+2019/02/15 13:05:21 packer-builder-vsphere-iso.linux: 2019/02/15 13:05:21 Floppy path: /tmp/packer170471972
+2019/02/15 13:05:21 packer-builder-vsphere-iso.linux: 2019/02/15 13:05:21 Initializing block device backed by temporary file
+2019/02/15 13:05:21 packer-builder-vsphere-iso.linux: 2019/02/15 13:05:21 Formatting the block device with a FAT filesystem...
+2019/02/15 13:05:21 packer-builder-vsphere-iso.linux: 2019/02/15 13:05:21 Initializing FAT filesystem on block device
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Copying files flatly from floppy_files[0m
+2019/02/15 13:05:21 packer-builder-vsphere-iso.linux: 2019/02/15 13:05:21 Reading the root directory from the filesystem
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Copying file: ./answer_files/AutoUnattend.xml[0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Copying file: ./answer_files/PostUnattend.xml[0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Copying file: ./scripts/post_deploy.cmd[0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Copying file: ./scripts/base.cmd[0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Copying file: ./scripts/shutdown.ps1[0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Copying file: ./scripts/winrm.ps1[0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Copying file: ./scripts/sceregvl.inf[0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Copying file: ./scripts/changeCDdrive.ps1[0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Copying file: ./scripts/compact.ps1[0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Copying file: ./scripts/disable-nicsettings.ps1[0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Copying file: ./scripts/sdelete/sdelete.exe[0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Copying file: ./scripts/disable-winrm.ps1[0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Copying file: ./scripts/win-updates.ps1[0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Copying file: ./scripts/Win2016Features.ps1[0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Done copying files from floppy_files[0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Collecting paths from floppy_dirs[0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Resulting paths from floppy_dirs : [][0m
+2019/02/15 13:05:21 ui: [0;32m    vsphere-iso: Done copying paths from floppy_dirs[0m
+2019/02/15 13:05:21 ui: [1;32m==> vsphere-iso: Uploading created floppy image[0m
+2019/02/15 13:05:22 ui: [1;32m==> vsphere-iso: Adding generated Floppy...[0m
+2019/02/15 13:05:23 ui: [1;32m==> vsphere-iso: Adding Floppy image...[0m
+2019/02/15 13:05:23 ui: [1;32m==> vsphere-iso: Set boot order temporary...[0m
+2019/02/15 13:05:23 ui: [1;32m==> vsphere-iso: Power on VM...[0m
+2019/02/15 13:05:28 ui: [1;32m==> vsphere-iso: Waiting 6m0s for boot...[0m
+2019/02/15 13:11:28 ui: [1;32m==> vsphere-iso: Typing boot command...[0m
+2019/02/15 13:11:28 ui: [1;32m==> vsphere-iso: Waiting for IP...[0m
+2019/02/15 13:13:29 ui: [1;32m==> vsphere-iso: IP address: 10.213.4.198[0m
+2019/02/15 13:13:29 packer-builder-vsphere-iso.linux: 2019/02/15 13:13:29 Waiting for WinRM, up to timeout: 30m0s
+2019/02/15 13:13:29 ui: [1;32m==> vsphere-iso: Waiting for WinRM to become available...[0m
+2019/02/15 13:13:34 packer-builder-vsphere-iso.linux: 2019/02/15 13:13:34 [INFO] Attempting WinRM connection...
+2019/02/15 13:13:34 packer-builder-vsphere-iso.linux: 2019/02/15 13:13:34 [DEBUG] connecting to remote shell using WinRM
+2019/02/15 13:13:47 packer-builder-vsphere-iso.linux: 2019/02/15 13:13:47 Checking that WinRM is connected with: 'powershell.exe -EncodedCommand aQBmACAAKABUAGUAcwB0AC0AUABhAHQAaAAgAHYAYQByAGkAYQBiAGwAZQA6AGcAbABvAGIAYQBsADoAUAByAG8AZwByAGUAcwBzAFAAcgBlAGYAZQByAGUAbgBjAGUAKQB7ACQAUAByAG8AZwByAGUAcwBzAFAAcgBlAGYAZQByAGUAbgBjAGUAPQAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwB9ADsAIABlAGMAaABvACAAIgBXAGkAbgBSAE0AIABjAG8AbgBuAGUAYwB0AGUAZAAuACIA'
+2019/02/15 13:13:47 packer-builder-vsphere-iso.linux: 2019/02/15 13:13:47 [INFO] starting remote command: powershell.exe -EncodedCommand aQBmACAAKABUAGUAcwB0AC0AUABhAHQAaAAgAHYAYQByAGkAYQBiAGwAZQA6AGcAbABvAGIAYQBsADoAUAByAG8AZwByAGUAcwBzAFAAcgBlAGYAZQByAGUAbgBjAGUAKQB7ACQAUAByAG8AZwByAGUAcwBzAFAAcgBlAGYAZQByAGUAbgBjAGUAPQAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwB9ADsAIABlAGMAaABvACAAIgBXAGkAbgBSAE0AIABjAG8AbgBuAGUAYwB0AGUAZAAuACIA
+2019/02/15 13:13:48 ui: [0;32m    vsphere-iso: WinRM connected.[0m
+2019/02/15 13:13:48 packer-builder-vsphere-iso.linux: 2019/02/15 13:13:48 [INFO] command 'powershell.exe -EncodedCommand aQBmACAAKABUAGUAcwB0AC0AUABhAHQAaAAgAHYAYQByAGkAYQBiAGwAZQA6AGcAbABvAGIAYQBsADoAUAByAG8AZwByAGUAcwBzAFAAcgBlAGYAZQByAGUAbgBjAGUAKQB7ACQAUAByAG8AZwByAGUAcwBzAFAAcgBlAGYAZQByAGUAbgBjAGUAPQAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwB9ADsAIABlAGMAaABvACAAIgBXAGkAbgBSAE0AIABjAG8AbgBuAGUAYwB0AGUAZAAuACIA' exited with code: 0
+2019/02/15 13:13:48 ui: [0;32m    vsphere-iso: #< CLIXML[0m
+2019/02/15 13:13:48 ui: [0;32m    vsphere-iso: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj><Obj S="progress" RefId="1"><TNRef RefId="0" /><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>[0m
+2019/02/15 13:13:48 packer-builder-vsphere-iso.linux: 2019/02/15 13:13:48 Connected to machine
+2019/02/15 13:13:48 ui: [1;32m==> vsphere-iso: Connected to WinRM![0m
+2019/02/15 13:13:48 packer-builder-vsphere-iso.linux: 2019/02/15 13:13:48 Running the provision hook
+2019/02/15 13:13:48 [INFO] (telemetry) Starting provisioner windows-restart
+2019/02/15 13:13:48 ui: [1;32m==> vsphere-iso: Restarting Machine[0m
+2019/02/15 13:13:48 packer-builder-vsphere-iso.linux: 2019/02/15 13:13:48 [INFO] starting remote command: shutdown /r /f /t 0 /c "packer restart"
+2019/02/15 13:13:48 packer-builder-vsphere-iso.linux: 2019/02/15 13:13:48 [INFO] command 'shutdown /r /f /t 0 /c "packer restart"' exited with code: 0
+2019/02/15 13:13:48 packer-builder-vsphere-iso.linux: 2019/02/15 13:13:48 [INFO] RPC endpoint: Communicator ended with: 0
+2019/02/15 13:13:48 [INFO] 0 bytes written for 'stdout'
+2019/02/15 13:13:48 [INFO] 0 bytes written for 'stderr'
+2019/02/15 13:13:48 [INFO] RPC client: Communicator ended with: 0
+2019/02/15 13:13:48 [INFO] RPC endpoint: Communicator ended with: 0
+2019/02/15 13:13:48 packer: 2019/02/15 13:13:48 [INFO] 0 bytes written for 'stdout'
+2019/02/15 13:13:48 packer: 2019/02/15 13:13:48 [INFO] 0 bytes written for 'stderr'
+2019/02/15 13:13:48 packer: 2019/02/15 13:13:48 [INFO] RPC client: Communicator ended with: 0
+2019/02/15 13:13:48 ui: [1;32m==> vsphere-iso: Waiting for machine to restart...[0m
+2019/02/15 13:13:49 packer: 2019/02/15 13:13:49 Check if machine is rebooting...
+2019/02/15 13:13:49 packer-builder-vsphere-iso.linux: 2019/02/15 13:13:49 [INFO] starting remote command: shutdown /r /f /t 60 /c "packer restart test"
+2019/02/15 13:13:49 packer-builder-vsphere-iso.linux: 2019/02/15 13:13:49 [INFO] command 'shutdown /r /f /t 60 /c "packer restart test"' exited with code: 1115
+2019/02/15 13:13:49 packer-builder-vsphere-iso.linux: 2019/02/15 13:13:49 [INFO] RPC endpoint: Communicator ended with: 1115
+2019/02/15 13:13:49 [INFO] 0 bytes written for 'stdout'
+2019/02/15 13:13:49 [INFO] 40 bytes written for 'stderr'
+2019/02/15 13:13:49 [INFO] RPC client: Communicator ended with: 1115
+2019/02/15 13:13:49 [INFO] RPC endpoint: Communicator ended with: 1115
+2019/02/15 13:13:49 packer: 2019/02/15 13:13:49 [INFO] 0 bytes written for 'stdout'
+2019/02/15 13:13:49 packer: 2019/02/15 13:13:49 [INFO] 40 bytes written for 'stderr'
+2019/02/15 13:13:49 packer: 2019/02/15 13:13:49 [INFO] RPC client: Communicator ended with: 1115
+2019/02/15 13:13:49 ui: [0;32m    vsphere-iso: A system shutdown is in progress.(1115)[0m
+2019/02/15 13:13:49 packer: 2019/02/15 13:13:49 Reboot already in progress, waiting...
+2019/02/15 13:13:59 packer: 2019/02/15 13:13:59 Check if machine is rebooting...
+2019/02/15 13:14:29 [INFO] 0 bytes written for 'stdout'
+2019/02/15 13:14:29 [INFO] 0 bytes written for 'stderr'
+2019/02/15 13:14:29 packer: 2019/02/15 13:14:29 [INFO] 0 bytes written for 'stdout'
+2019/02/15 13:14:29 packer: 2019/02/15 13:14:29 Waiting for machine to reboot with timeout: 5m0s
+2019/02/15 13:14:29 packer: 2019/02/15 13:14:29 Waiting for machine to become available...
+2019/02/15 13:14:29 packer: 2019/02/15 13:14:29 Checking that communicator is connected with: 'powershell.exe -EncodedCommand ZQBjAGgAbwAgACIAJAB7AGUAbgB2ADoAQwBPAE0AUABVAFQARQBSAE4AQQBNAEUAfQAgAHIAZQBzAHQAYQByAHQAZQBkAC4AIgA='
+2019/02/15 13:14:29 packer: 2019/02/15 13:14:29 [INFO] 0 bytes written for 'stderr'
+2019/02/15 13:14:36 packer-builder-vsphere-iso.linux: 2019/02/15 13:14:36 [INFO] starting remote command: powershell.exe -EncodedCommand ZQBjAGgAbwAgACIAJAB7AGUAbgB2ADoAQwBPAE0AUABVAFQARQBSAE4AQQBNAEUAfQAgAHIAZQBzAHQAYQByAHQAZQBkAC4AIgA=
+2019/02/15 13:14:46 packer-builder-vsphere-iso.linux: 2019/02/15 13:14:46 [INFO] command 'powershell.exe -EncodedCommand ZQBjAGgAbwAgACIAJAB7AGUAbgB2ADoAQwBPAE0AUABVAFQARQBSAE4AQQBNAEUAfQAgAHIAZQBzAHQAYQByAHQAZQBkAC4AIgA=' exited with code: 0
+2019/02/15 13:14:46 packer-builder-vsphere-iso.linux: 2019/02/15 13:14:46 [INFO] RPC endpoint: Communicator ended with: 0
+2019/02/15 13:14:46 [INFO] 392 bytes written for 'stderr'
+2019/02/15 13:14:46 [INFO] 28 bytes written for 'stdout'
+2019/02/15 13:14:46 [INFO] RPC client: Communicator ended with: 0
+2019/02/15 13:14:46 [INFO] RPC endpoint: Communicator ended with: 0
+2019/02/15 13:14:46 packer: 2019/02/15 13:14:46 [INFO] 28 bytes written for 'stdout'
+2019/02/15 13:14:46 packer: 2019/02/15 13:14:46 [INFO] 392 bytes written for 'stderr'
+2019/02/15 13:14:46 packer: 2019/02/15 13:14:46 [INFO] RPC client: Communicator ended with: 0
+2019/02/15 13:14:46 ui: [0;32m    vsphere-iso: CWTCWT-GRCAHC0I restarted.[0m
+2019/02/15 13:14:46 ui: [0;32m    vsphere-iso: #< CLIXML[0m
+2019/02/15 13:14:46 ui: [0;32m    vsphere-iso: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>[0m
+2019/02/15 13:14:46 ui: [1;32m==> vsphere-iso: Machine successfully restarted, moving on[0m
+2019/02/15 13:14:46 [INFO] (telemetry) ending windows-restart
+2019/02/15 13:14:46 [INFO] (telemetry) Starting provisioner file
+2019/02/15 13:14:46 ui: [1;32m==> vsphere-iso: Uploading ./scripts/shutdown.ps1 => C:/windows/temp/shutdown.ps1[0m
+2019/02/15 13:14:46 Error in Ui.ProgressBar RPC call: rpc: can't find method Ui.ProgressBar
+2019/02/15 13:14:46 Error in Ui.ProgressBar RPC call: rpc: can't find method Ui.ProgressBar
+2019/02/15 13:14:46 Error in Ui.ProgressBar RPC call: rpc: can't find method Ui.ProgressBar
+2019/02/15 13:14:46 Error in Ui.ProgressBar RPC call: rpc: can't find method Ui.ProgressBar
+2019/02/15 13:14:46 [INFO] 254 bytes written for 'uploadData'
+2019/02/15 13:14:46 packer: 2019/02/15 13:14:46 [INFO] 254 bytes written for 'uploadData'
+2019/02/15 13:14:47 packer-builder-vsphere-iso.linux: 2019/02/15 13:14:47 Uploading file to 'C:/windows/temp/shutdown.ps1'
+2019/02/15 13:14:47 packer-builder-vsphere-iso.linux: #< CLIXML
+2019/02/15 13:14:48 packer-builder-vsphere-iso.linux: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>#< CLIXML
+2019/02/15 13:14:48 Error in Ui.ProgressBar RPC call: rpc: can't find method Ui.ProgressBar
+2019/02/15 13:14:48 [INFO] (telemetry) ending file
+2019/02/15 13:14:48 [INFO] (telemetry) Starting provisioner powershell
+2019/02/15 13:14:48 ui: [1;32m==> vsphere-iso: Provisioning with Powershell...[0m
+2019/02/15 13:14:48 ui: [1;32m==> vsphere-iso: Provisioning with powershell script: scripts/disable-nicsettings.ps1[0m
+2019/02/15 13:14:48 packer: 2019/02/15 13:14:48 Opening scripts/disable-nicsettings.ps1 for reading
+2019/02/15 13:14:48 packer: 2019/02/15 13:14:48 Uploading env vars to c:/Windows/Temp/packer-ps-env-vars-5c67298d-63b3-118f-ce76-0079888a96d3.ps1
+2019/02/15 13:14:48 packer: 2019/02/15 13:14:48 [INFO] 78 bytes written for 'uploadData'
+2019/02/15 13:14:48 [INFO] 78 bytes written for 'uploadData'
+2019/02/15 13:14:48 packer-builder-vsphere-iso.linux: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>2019/02/15 13:14:48 Uploading file to 'c:/Windows/Temp/packer-ps-env-vars-5c67298d-63b3-118f-ce76-0079888a96d3.ps1'
+2019/02/15 13:14:48 packer-builder-vsphere-iso.linux: #< CLIXML
+2019/02/15 13:14:49 packer-builder-vsphere-iso.linux: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>#< CLIXML
+2019/02/15 13:14:49 packer: 2019/02/15 13:14:49 Building elevated command wrapper for: powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-5c67298d-63b3-118f-ce76-0079888a96d3.ps1; &'c:/Windows/Temp/script-5c67298d-c15b-0cbf-7904-85943fc653fb.ps1'; exit $LastExitCode }"
+2019/02/15 13:14:49 packer: 2019/02/15 13:14:49 Command [powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-5c67298d-63b3-118f-ce76-0079888a96d3.ps1; &'c:/Windows/Temp/script-5c67298d-c15b-0cbf-7904-85943fc653fb.ps1'; exit $LastExitCode }" > %SYSTEMROOT%/Temp/packer-5c672bc9-b4ae-f3b9-05f6-b186a4239c6a.out 2>&1] converted to [powershell -executionpolicy bypass &#34;&amp; { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value &#39;SilentlyContinue&#39;};. c:/Windows/Temp/packer-ps-env-vars-5c67298d-63b3-118f-ce76-0079888a96d3.ps1; &amp;&#39;c:/Windows/Temp/script-5c67298d-c15b-0cbf-7904-85943fc653fb.ps1&#39;; exit $LastExitCode }&#34; &gt; %SYSTEMROOT%/Temp/packer-5c672bc9-b4ae-f3b9-05f6-b186a4239c6a.out 2&gt;&amp;1] for use in XML string
+2019/02/15 13:14:49 packer: 2019/02/15 13:14:49 Uploading elevated shell wrapper for command [powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-5c67298d-63b3-118f-ce76-0079888a96d3.ps1; &'c:/Windows/Temp/script-5c67298d-c15b-0cbf-7904-85943fc653fb.ps1'; exit $LastExitCode }" > %SYSTEMROOT%/Temp/packer-5c672bc9-b4ae-f3b9-05f6-b186a4239c6a.out 2>&1] to [C:/Windows/Temp/packer-elevated-shell-5c672bc9-13e5-594a-94ed-d882856c74be.ps1]
+2019/02/15 13:14:49 packer: 2019/02/15 13:14:49 [INFO] 3210 bytes written for 'uploadData'
+2019/02/15 13:14:49 [INFO] 3210 bytes written for 'uploadData'
+2019/02/15 13:14:49 packer-builder-vsphere-iso.linux: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>2019/02/15 13:14:49 Uploading file to 'C:/Windows/Temp/packer-elevated-shell-5c672bc9-13e5-594a-94ed-d882856c74be.ps1'
+2019/02/15 13:14:50 packer-builder-vsphere-iso.linux: #< CLIXML
+2019/02/15 13:14:50 packer-builder-vsphere-iso.linux: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>#< CLIXML
+2019/02/15 13:14:50 packer: 2019/02/15 13:14:50 [INFO] 502 bytes written for 'uploadData'
+2019/02/15 13:14:50 [INFO] 502 bytes written for 'uploadData'
+2019/02/15 13:14:51 packer-builder-vsphere-iso.linux: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>2019/02/15 13:14:51 Uploading file to 'c:/Windows/Temp/script-5c67298d-c15b-0cbf-7904-85943fc653fb.ps1'
+2019/02/15 13:14:52 packer-builder-vsphere-iso.linux: #< CLIXML
+2019/02/15 13:15:19 packer-builder-vsphere-iso.linux: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>#< CLIXML
+2019/02/15 13:15:32 packer-builder-vsphere-iso.linux: <Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04"><Obj S="progress" RefId="0"><TN RefId="0"><T>System.Management.Automation.PSCustomObject</T><T>System.Object</T></TN><MS><I64 N="SourceId">1</I64><PR N="Record"><AV>Preparing modules for first use.</AV><AI>0</AI><Nil /><PI>-1</PI><PC>-1</PC><T>Completed</T><SR>-1</SR><SD> </SD></PR></MS></Obj></Objs>2019/02/15 13:15:32 [INFO] starting remote command: powershell -executionpolicy bypass -file "C:/Windows/Temp/packer-elevated-shell-5c672bc9-13e5-594a-94ed-d882856c74be.ps1"
+2019/02/15 13:15:36 packer-builder-vsphere-iso.linux: 2019/02/15 13:15:36 [INFO] command 'powershell -executionpolicy bypass -file "C:/Windows/Temp/packer-elevated-shell-5c672bc9-13e5-594a-94ed-d882856c74be.ps1"' exited with code: 0
+2019/02/15 13:15:36 packer-builder-vsphere-iso.linux: 2019/02/15 13:15:36 [INFO] RPC endpoint: Communicator ended with: 0
+2019/02/15 13:15:36 [INFO] 4113 bytes written for 'stdout'
+2019/02/15 13:15:36 [INFO] 0 bytes written for 'stderr'
+2019/02/15 13:15:36 [INFO] RPC client: Communicator ended with: 0
+2019/02/15 13:15:36 [INFO] RPC endpoint: Communicator ended with: 0
+2019/02/15 13:15:36 packer: 2019/02/15 13:15:36 [INFO] 0 bytes written for 'stderr'
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: Name                           DisplayName                                        ComponentID          Enabled[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: ----                           -----------                                        -----------          -------[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: Ethernet0                      Internet Protocol Version 6 (TCP/IPv6)             ms_tcpip6            False[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: Disable-NetAdapterPowerManagement : No MSFT_NetAdapterPowerManagementSettingData objects found with property 'Name'[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: equal to 'Primary Network Connection'.  Verify the value of the property and retry.[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: At C:\Windows\Temp\script-5c67298d-c15b-0cbf-7904-85943fc653fb.ps1:8 char:1[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: + Disable-NetAdapterPowerManagement -Name "Primary Network Connection"  ...[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: + ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:     + CategoryInfo          : ObjectNotFound: (Primary Network Connection:String) [Disable-NetAdapterPowerManagement],[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:     CimJobException[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:     + FullyQualifiedErrorId : CmdletizationQuery_NotFound_Name,Disable-NetAdapterPowerManagement[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: \\CWTCWT-GRCAHC0I\root\cimv2:Win32_NetworkAdapterConfiguration.Index=0[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __GENUS          : 2[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __CLASS          : __PARAMETERS[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __SUPERCLASS     :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __DYNASTY        : __PARAMETERS[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __RELPATH        :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __PROPERTY_COUNT : 1[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __DERIVATION     : {}[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __SERVER         :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __NAMESPACE      :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __PATH           :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: ReturnValue      : 84[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: PSComputerName   :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: Method invocation failed because [System.Management.ManagementObject] does not contain a method named 'EnableWINS'.[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: At C:\Windows\Temp\script-5c67298d-c15b-0cbf-7904-85943fc653fb.ps1:15 char:3[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: +   $adapter.EnableWINS($false,$false)[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: +   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:     + CategoryInfo          : InvalidOperation: (EnableWINS:String) [], RuntimeException[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:     + FullyQualifiedErrorId : MethodNotFound[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: \\CWTCWT-GRCAHC0I\root\cimv2:Win32_NetworkAdapterConfiguration.Index=1[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __GENUS          : 2[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __CLASS          : __PARAMETERS[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __SUPERCLASS     :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __DYNASTY        : __PARAMETERS[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __RELPATH        :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __PROPERTY_COUNT : 1[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __DERIVATION     : {}[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __SERVER         :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __NAMESPACE      :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __PATH           :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: ReturnValue      : 0[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: PSComputerName   :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: Method invocation failed because [System.Management.ManagementObject] does not contain a method named 'EnableWINS'.[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: At C:\Windows\Temp\script-5c67298d-c15b-0cbf-7904-85943fc653fb.ps1:15 char:3[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: +   $adapter.EnableWINS($false,$false)[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: +   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:     + CategoryInfo          : InvalidOperation: (EnableWINS:String) [], RuntimeException[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:     + FullyQualifiedErrorId : MethodNotFound[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: \\CWTCWT-GRCAHC0I\root\cimv2:Win32_NetworkAdapterConfiguration.Index=2[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __GENUS          : 2[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __CLASS          : __PARAMETERS[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __SUPERCLASS     :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __DYNASTY        : __PARAMETERS[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __RELPATH        :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __PROPERTY_COUNT : 1[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __DERIVATION     : {}[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __SERVER         :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __NAMESPACE      :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __PATH           :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: ReturnValue      : 84[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: PSComputerName   :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: Method invocation failed because [System.Management.ManagementObject] does not contain a method named 'EnableWINS'.[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: At C:\Windows\Temp\script-5c67298d-c15b-0cbf-7904-85943fc653fb.ps1:15 char:3[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: +   $adapter.EnableWINS($false,$false)[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: +   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:     + CategoryInfo          : InvalidOperation: (EnableWINS:String) [], RuntimeException[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:     + FullyQualifiedErrorId : MethodNotFound[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: \\CWTCWT-GRCAHC0I\root\cimv2:Win32_NetworkAdapterConfiguration.Index=3[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __GENUS          : 2[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __CLASS          : __PARAMETERS[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __SUPERCLASS     :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __DYNASTY        : __PARAMETERS[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __RELPATH        :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __PROPERTY_COUNT : 1[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __DERIVATION     : {}[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __SERVER         :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __NAMESPACE      :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: __PATH           :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: ReturnValue      : 84[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: PSComputerName   :[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: Method invocation failed because [System.Management.ManagementObject] does not contain a method named 'EnableWINS'.[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: At C:\Windows\Temp\script-5c67298d-c15b-0cbf-7904-85943fc653fb.ps1:15 char:3[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: +   $adapter.EnableWINS($false,$false)[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso: +   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~[0m
+2019/02/15 13:15:36 packer: 2019/02/15 13:15:36 [INFO] 4113 bytes written for 'stdout'
+2019/02/15 13:15:36 packer: 2019/02/15 13:15:36 [INFO] RPC client: Communicator ended with: 0
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:     + CategoryInfo          : InvalidOperation: (EnableWINS:String) [], RuntimeException[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:     + FullyQualifiedErrorId : MethodNotFound[0m
+2019/02/15 13:15:36 ui: [0;32m    vsphere-iso:[0m
+2019/02/15 13:15:36 [INFO] (telemetry) ending powershell
+2019/02/15 13:15:36 ui: [1;32m==> vsphere-iso: Executing shutdown command...[0m
+2019/02/15 13:15:36 packer-builder-vsphere-iso.linux: 2019/02/15 13:15:36 Shutdown command: C:/windows/temp/shutdown.ps1
+2019/02/15 13:15:36 packer-builder-vsphere-iso.linux: 2019/02/15 13:15:36 [INFO] starting remote command: C:/windows/temp/shutdown.ps1
+2019/02/15 13:15:36 packer-builder-vsphere-iso.linux: 2019/02/15 13:15:36 Waiting max 1h0m0s for shutdown to complete
+2019/02/15 13:18:06 packer-builder-vsphere-iso.linux: 2019/02/15 13:18:06 [INFO] command 'C:/windows/temp/shutdown.ps1' exited with code: 0
+2019/02/15 13:19:40 ui: [1;32m==> vsphere-iso: Deleting Floppy drives...[0m
+2019/02/15 13:19:41 ui: [1;32m==> vsphere-iso: Deleting Floppy image...[0m
+2019/02/15 13:19:41 ui: [1;32m==> vsphere-iso: Eject CD-ROM drives...[0m
+2019/02/15 13:19:42 ui: [1;32m==> vsphere-iso: Convert VM into template...[0m
+2019/02/15 13:19:42 Stopping build: vsphere-iso
+2019/02/15 13:19:42 Closing stdin because interrupt received.
+2019/02/15 13:19:42 packer: 2019/02/15 13:19:42 Received interrupt signal (count: 1). Ignoring.
+2019/02/15 13:19:42 packer: 2019/02/15 13:19:42 Received interrupt signal (count: 1). Ignoring.
+2019/02/15 13:19:42 packer: 2019/02/15 13:19:42 Received interrupt signal (count: 1). Ignoring.
+2019/02/15 13:19:42 packer-builder-vsphere-iso.linux: 2019/02/15 13:19:42 Received interrupt signal (count: 1). Ignoring.
+2019/02/15 13:19:42 ui: [1;32m==> vsphere-iso: Clear boot order...[0m
+2019/02/15 13:19:42 ui: [1;32m==> vsphere-iso: Power off VM...[0m
+2019/02/15 13:19:42 ui: [1;32m==> vsphere-iso: Deleting Floppy image ...[0m
+2019/02/15 13:19:42 packer-builder-vsphere-iso.linux: 2019/02/15 13:19:42 Deleting floppy disk: /tmp/packer170471972
+2019/02/15 13:19:42 ui: [1;32m==> vsphere-iso: Destroying VM...[0m
+2019/02/15 13:19:43 packer-builder-vsphere-iso.linux: panic: interface conversion: interface is nil, not error
+2019/02/15 13:19:43 packer-builder-vsphere-iso.linux: 
+2019/02/15 13:19:43 packer-builder-vsphere-iso.linux: goroutine 24 [running]:
+2019/02/15 13:19:43 packer-builder-vsphere-iso.linux: github.com/jetbrains-infra/packer-builder-vsphere/iso.(*Builder).Run(0xc420173160, 0x11dd540, 0xc4203ef400, 0x11d85c0, 0xc4203f80c0, 0x11dc9c0, 0xc42000c5a8, 0x4b688c, 0xe06780, 0xe06780, ...)
+2019/02/15 13:19:43 packer-builder-vsphere-iso.linux: 	/mnt/agent/work/69eebf6324555ecb/src/github.com/jetbrains-infra/packer-builder-vsphere/iso/builder.go:103 +0xc34
+2019/02/15 13:19:43 packer-builder-vsphere-iso.linux: github.com/jetbrains-infra/packer-builder-vsphere/vendor/github.com/hashicorp/packer/packer/rpc.(*BuilderServer).Run(0xc420173180, 0x1, 0xc420176470, 0x0, 0x0)
+2019/02/15 13:19:43 packer-builder-vsphere-iso.linux: 	/mnt/agent/work/69eebf6324555ecb/src/github.com/jetbrains-infra/packer-builder-vsphere/vendor/github.com/hashicorp/packer/packer/rpc/builder.go:94 +0x1ce
+2019/02/15 13:19:43 packer-builder-vsphere-iso.linux: reflect.Value.call(0xc4201666c0, 0xc420174188, 0x13, 0x10e3267, 0x4, 0xc420068f18, 0x3, 0x3, 0xc42016e780, 0xc420374f88, ...)
+2019/02/15 13:19:43 packer-builder-vsphere-iso.linux: 	/usr/local/go/src/reflect/value.go:447 +0x969
+2019/02/15 13:19:43 packer-builder-vsphere-iso.linux: reflect.Value.Call(0xc4201666c0, 0xc420174188, 0x13, 0xc42036b718, 0x3, 0x3, 0x1, 0x54344e, 0x1)
+2019/02/15 13:19:43 packer-builder-vsphere-iso.linux: 	/usr/local/go/src/reflect/value.go:308 +0xa4
+2019/02/15 13:19:43 packer-builder-vsphere-iso.linux: net/rpc.(*service).call(0xc42016e800, 0xc420170640, 0xc420176430, 0xc420176440, 0xc420178980, 0xc42012cbc0, 0xe33380, 0xc42017643c, 0x18a, 0xe06780, ...)
+2019/02/15 13:19:43 packer-builder-vsphere-iso.linux: 	/usr/local/go/src/net/rpc/server.go:384 +0x14e
+2019/02/15 13:19:43 packer-builder-vsphere-iso.linux: created by net/rpc.(*Server).ServeCodec
+2019/02/15 13:19:43 packer-builder-vsphere-iso.linux: 	/usr/local/go/src/net/rpc/server.go:480 +0x43a
+2019/02/15 13:19:43 Error cancelling builder: unexpected EOF
+2019/02/15 13:19:43 Build cancelled: vsphere-iso
+2019/02/15 13:19:43 [INFO] (telemetry) ending vsphere-iso
+2019/02/15 13:19:43 [ERR] Error decoding response stream 10: EOF
+2019/02/15 13:19:43 ui error: [1;31mBuild 'vsphere-iso' errored: unexpected EOF[0m
+2019/02/15 13:19:43 Builds completed. Waiting on interrupt barrier...
+2019/02/15 13:19:43 ui: Cleanly cancelled builds after being interrupted.
+2019/02/15 13:19:43 /home/u014cxf/.packer.d/plugins/packer-builder-vsphere-iso.linux: plugin process exited
+2019/02/15 13:19:43 [INFO] (telemetry) Finalizing.
+2019/02/15 13:19:43 waiting for all plugin processes to complete...
+2019/02/15 13:19:43 /usr/local/bin/packer: plugin process exited
+2019/02/15 13:19:43 /usr/local/bin/packer: plugin process exited
+2019/02/15 13:19:43 /usr/local/bin/packer: plugin process exited

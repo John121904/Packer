@@ -86,6 +86,8 @@ MKDIR D:\Resource\www\prod
 ::set windows firewall
 netsh advfirewall set allprofiles state on
 netsh advfirewall set allprofiles firewallpolicy allowinboound,allowoutbound
+netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo request" protocol=icmpv4:8,any dir=in action=allow
+
 
 :: Set boot delay to 10 seconds (again)
 bcdedit /timeout 10
