@@ -34,12 +34,13 @@
       "winrm_username": "ugxg042",
       "winrm_password": "{{user `winrm_password`}}",
       "winrm_use_ssl": "false",
-      "shutdown_command": "C:/windows/temp/shutdown.ps1",
+      "shutdown_command": "a:/shutdown.cmd",
       "floppy_files": [
         "./answer_files/AutoUnattend.xml",
         "./answer_files/PostUnattend.xml",
         "./scripts/post_deploy.cmd",
         "./scripts/base.cmd",
+        "./scripts/shutdown.cmd",
         "./scripts/shutdown.ps1",
         "./scripts/winrm.ps1",
         "./scripts/sceregvl.inf",
@@ -63,15 +64,16 @@
                        "type": "windows-restart"
         },
         {
-                       "type": "file",
-                       "source": "./scripts/shutdown.ps1",
-                       "destination": "C:/windows/temp/shutdown.ps1"
-        },
-        {
-                       "script": "scripts/disable-nicsettings.ps1",
+                       "script": "scripts/compact.ps1",
                        "elevated_user": "ugxg042",
                        "elevated_password": "{{user `elevated_password`}}",
                        "type": "powershell"
+        },
+        {
+                       "type": "file",
+                       "source": "scripts/configure-ansible.ps1",
+                       "destination": "c:/windows/temp/configure-ansible.ps1",
+		       "pause_before": "3m"
         }
   ]
 }
