@@ -23,7 +23,7 @@
       "disk_thin_provisioned": true,
       "network_card": "vmxnet3",
 
-      "network": "603-Internal_Pre-Prod_vDS",
+      "network": "603-Internal_Pre-Prod_DevOps_vDS",
       "guest_os_type": "windows9Server64Guest",
       "iso_paths": [
         "[NV02-Test] ISO/SW_DVD9_Win_Svr_STD_Core_and_DataCtr_Core_2016_64Bit_English_-2_MLF_X21-22843.ISO",
@@ -90,9 +90,14 @@
         },
         {
                        "type": "file",
-                       "source": "scripts/configure-ansible.ps1",
-                       "destination": "c:/windows/temp/configure-ansible.ps1",
+                       "source": "scripts/legal_notice.cmd",
+                       "destination": "c:/windows/temp/legal_notice.cmd",
 		       "pause_before": "3m"
+        },
+        {
+                       "type": "file",
+                       "source": "scripts/configure-ansible.ps1",
+                       "destination": "c:/windows/temp/configure-ansible.ps1"
         }
   ]
 }
