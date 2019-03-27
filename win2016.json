@@ -34,7 +34,7 @@
       "winrm_username": "ugxg042",
       "winrm_password": "{{user `winrm_password`}}",
       "winrm_use_ssl": "false",
-      "shutdown_command": "a:/shutdown.cmd",
+      "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "floppy_files": [
         "./answer_files/AutoUnattend.xml",
         "./answer_files/PostUnattend.xml",
@@ -46,9 +46,8 @@
         "./scripts/sceregvl.inf",
         "./scripts/changeCDdrive.ps1",
         "./scripts/compact.ps1",
-        "./scripts/disable-nicsettings.ps1",
         "./scripts/sdelete/sdelete.exe",
-        "./scripts/disable-winrm.ps1",
+        "./scripts/configure-ansible.ps1",
         "./scripts/win-updates.ps1",
         "./scripts/Win2016Features.ps1"
       ],
@@ -76,23 +75,10 @@
                        "type": "powershell"
         },
         {
-                       "script": "scripts/disable-nicsettings.ps1",
-                       "elevated_user": "ugxg042",
-                       "elevated_password": "{{user `elevated_password`}}",
-                       "pause_before": "3m",
-                       "type": "powershell"
-        },
-        {
                        "script": "scripts/compact.ps1",
                        "elevated_user": "ugxg042",
                        "elevated_password": "{{user `elevated_password`}}",
                        "type": "powershell"
-        },
-        {
-                       "type": "file",
-                       "source": "scripts/legal_notice.cmd",
-                       "destination": "c:/windows/temp/legal_notice.cmd",
-		       "pause_before": "3m"
         },
         {
                        "type": "file",
