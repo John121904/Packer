@@ -128,15 +128,17 @@ reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "Leg
 net start winrm
 
 ::config WinRM
-powershell a:\winrm.ps1
+::powershell a:\winrm.ps1
 
-::winrm quickconfig -quiet
-::winrm set winrm/config/client/auth '@{Basic="true"}'
-::winrm set winrm/config/service/auth '@{Basic="true"}' 
-::winrm set winrm/config/service '@{AllowUnencrypted="true"}'
+winrm quickconfig -quiet
+winrm set winrm/config/client/auth '@{Basic="true"}'
+winrm set winrm/config/service/auth '@{Basic="true"}' 
+winrm set winrm/config/service '@{AllowUnencrypted="true"}'
 ::run windows updates
 ::powershell a:\win-updates.ps1
 
+net stop winrm
+net start winrm
 ::set windows firewall
 ::netsh advfirewall set allprofiles state on
 ::netsh advfirewall set allprofiles firewallpolicy allowinboound,allowoutbound

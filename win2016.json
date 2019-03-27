@@ -34,6 +34,7 @@
       "winrm_username": "ugxg042",
       "winrm_password": "{{user `winrm_password`}}",
       "winrm_use_ssl": "false",
+      "winrm_insecure": "true",
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "floppy_files": [
         "./answer_files/AutoUnattend.xml",
