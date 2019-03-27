@@ -37,7 +37,6 @@
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "floppy_files": [
         "./answer_files/AutoUnattend.xml",
-        "./answer_files/PostUnattend.xml",
         "./scripts/post_deploy.cmd",
         "./scripts/base.cmd",
         "./scripts/winrm.ps1",
