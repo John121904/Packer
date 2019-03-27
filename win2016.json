@@ -40,8 +40,6 @@
         "./answer_files/PostUnattend.xml",
         "./scripts/post_deploy.cmd",
         "./scripts/base.cmd",
-        "./scripts/shutdown.cmd",
-        "./scripts/shutdown.ps1",
         "./scripts/winrm.ps1",
         "./scripts/sceregvl.inf",
         "./scripts/changeCDdrive.ps1",
