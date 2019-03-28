@@ -11,9 +11,9 @@
 
       "vm_name":  "Windows_TMPL",
       "convert_to_template": "true",
-      "cluster": "NV02 Test",
-      "host": "svnv02ie01200.int.carlsonwagonlit.com",
-      "datastore": "NV02-Test",
+      "cluster": "NV02 Core Services",
+      "host": "svnv02ie00049.int.carlsonwagonlit.com",
+      "datastore": "CorePXFA216",
       "folder": "Test/Windows",
 
       "CPUs": "1",
@@ -23,18 +23,17 @@
       "disk_thin_provisioned": true,
       "network_card": "vmxnet3",
 
-      "network": "603-Internal_Pre-Prod_DevOps_vDS",
+      "network": "102-Core_Mgmt_vDS",
       "guest_os_type": "windows9Server64Guest",
       "iso_paths": [
-        "[NV02-Test] ISO/SW_DVD9_Win_Svr_STD_Core_and_DataCtr_Core_2016_64Bit_English_-2_MLF_X21-22843.ISO",
-        "[NV02-Test] ISO/windows.iso"
+        "[CorePXFA216] ISO/SW_DVD9_Win_Svr_STD_Core_and_DataCtr_Core_2016_64Bit_English_-2_MLF_X21-22843.ISO",
+        "[CorePXFA216] ISO/windows.iso"
       ],
 
       "communicator": "winrm",
       "winrm_username": "ugxg042",
       "winrm_password": "{{user `winrm_password`}}",
       "winrm_use_ssl": "false",
-      "winrm_insecure": "true",
       "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
       "floppy_files": [
         "./answer_files/AutoUnattend.xml",
@@ -49,7 +48,7 @@
         "./scripts/win-updates.ps1",
         "./scripts/Win2016Features.ps1"
       ],
-      "floppy_img_path": "[NV02-Test] floppies/pvscsi-Windows8.flp",
+      "floppy_img_path": "[CorePXFA216] floppies/pvscsi-Windows8.flp",
       "boot_wait": "6m",
       "shutdown_timeout": "1h",
       "boot_command": [

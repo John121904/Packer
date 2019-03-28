@@ -29,13 +29,13 @@ powercfg.exe -h off
 e:\setup64 /s /v "/qb REBOOT=R"
 
 ::set static IP
-netsh interface ip set address name="Ethernet0" static 10.213.4.198 255.255.255.0 10.213.4.250
+netsh interface ip set address name="Ethernet0" static 10.213.252.130 255.255.255.0 10.213.252.250
 netsh dnsclient set dnsservers name="Ethernet0" source=static address=10.213.252.25 validate=no
 
 ::set windows firewall
-::netsh advfirewall set allprofiles state on
-::netsh advfirewall set allprofiles firewallpolicy allowinboound,allowoutbound
-
+netsh advfirewall set allprofiles state on
+netsh advfirewall set allprofiles firewallpolicy allowinboound,allowoutbound
+netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo request" protocol=icmpv4:8,any dir=in action=allow
 
 :: Use small dump file on system failure, see below for setting
 :: 0=None, 1=Complete, 2=Kernel, 3=Small, 7=Automatic
@@ -84,9 +84,9 @@ MKDIR D:\Resource\www\staging
 MKDIR D:\Resource\www\prod
 
 ::set windows firewall
-netsh advfirewall set allprofiles state on
-netsh advfirewall set allprofiles firewallpolicy allowinboound,allowoutbound
-netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo request" protocol=icmpv4:8,any dir=in action=allow
+::netsh advfirewall set allprofiles state on
+::netsh advfirewall set allprofiles firewallpolicy allowinboound,allowoutbound
+::netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo request" protocol=icmpv4:8,any dir=in action=allow
 
 
 :: Set boot delay to 10 seconds (again)
@@ -128,12 +128,12 @@ reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "Leg
 net start winrm
 
 ::config WinRM
-::powershell a:\winrm.ps1
+powershell a:\winrm.ps1
 
-winrm quickconfig -quiet
-winrm set winrm/config/client/auth '@{Basic="true"}'
-winrm set winrm/config/service/auth '@{Basic="true"}' 
-winrm set winrm/config/service '@{AllowUnencrypted="true"}'
+::winrm quickconfig -quiet
+::winrm set winrm/config/client/auth '@{Basic="true"}'
+::winrm set winrm/config/service/auth '@{Basic="true"}' 
+::winrm set winrm/config/service '@{AllowUnencrypted="true"}'
 ::run windows updates
 ::powershell a:\win-updates.ps1
 
