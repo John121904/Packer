@@ -16,7 +16,7 @@
       "datastore": "CorePXFA216",
       "folder": "Test/Windows",
 
-      "CPUs": "1",
+      "CPUs": "2",
       "RAM": "8096",
       "disk_size": "61440",
       "disk_controller_type": "pvscsi",
@@ -42,6 +42,7 @@
         "./scripts/winrm.ps1",
         "./scripts/sceregvl.inf",
         "./scripts/changeCDdrive.ps1",
+        "./scripts/apply-nicsettings.ps1",
         "./scripts/compact.ps1",
         "./scripts/sdelete/sdelete.exe",
         "./scripts/configure-ansible.ps1",
@@ -64,12 +65,6 @@
         },
         {
                        "type": "windows-restart"
-        },
-        {
-                       "script": "scripts/win-updates.ps1",
-                       "elevated_user": "ugxg042",
-                       "elevated_password": "{{user `elevated_password`}}",
-                       "type": "powershell"
         },
         {
                        "script": "scripts/compact.ps1",
