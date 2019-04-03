@@ -2,7 +2,6 @@
 #disable ipv6 on primary nic
 $nic = get-netadapter
 Disable-NetAdapterBinding –InterfaceAlias $nic.name –ComponentID ms_tcpip6
-Disable-NetAdapterBinding –Name $nic.name –ComponentID ms_tcpip6
 
 #rename ethernet adapter
 Get-NetAdapter -Name * | Rename-NetAdapter -NewName "Primary Network Connection"

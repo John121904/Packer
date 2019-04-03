@@ -58,6 +58,12 @@
     ],
     "provisioners": [
         {
+                       "script": "scripts/apply-nicsettings.ps1",
+                       "elevated_user": "ugxg042",
+                       "elevated_password": "{{user `elevated_password`}}",
+                       "type": "powershell"
+        },
+        {
                        "script": "scripts/Win2016Features.ps1",
                        "elevated_user": "ugxg042",
                        "elevated_password": "{{user `elevated_password`}}",
