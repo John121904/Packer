@@ -45,7 +45,7 @@
                 </ModifyPartition>
                 <ModifyPartition wcm:action="add">
                     <Format>NTFS</Format>
-                    <Label>Windows 2016</Label>
+                    <Label>Local Disk</Label>
                     <Letter>C</Letter>
                     <Order>2</Order>
                     <PartitionID>2</PartitionID>
