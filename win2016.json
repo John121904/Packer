@@ -34,7 +34,7 @@
       "winrm_username": "ugxg042",
       "winrm_password": "{{user `winrm_password`}}",
       "winrm_use_ssl": "false",
-      "shutdown_command": "shutdown /s /t 10 /f /d p:4:1 /c \"Packer Shutdown\"",
+      "shutdown_command": "a:/shutdown.bat",
       "floppy_files": [
         "./answer_files/AutoUnattend.xml",
         "./scripts/post_deploy.cmd",
@@ -44,6 +44,7 @@
         "./scripts/changeCDdrive.ps1",
         "./scripts/apply-nicsettings.ps1",
         "./scripts/compact.ps1",
+        "./scripts/shutdown.bat",
         "./scripts/sdelete/sdelete.exe",
         "./scripts/configure-ansible.ps1",
         "./scripts/win-updates.ps1",
