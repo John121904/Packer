@@ -34,8 +34,10 @@ netsh dnsclient set dnsservers name="Ethernet0" source=static address=10.213.252
 
 ::set windows firewall
 netsh advfirewall set allprofiles state on
-netsh advfirewall set allprofiles firewallpolicy allowinboound,allowoutbound
-netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo request" protocol=icmpv4:8,any dir=in action=allow
+netsh advfirewall firewall add rule name="Allow_Any_Outbound_CWT" dir=out action=allow enable=yes
+netsh advfirewall firewall add rule name="Allow_Any_Inbound_CWT" dir=in action=allow enable=yes
+:: netsh advfirewall set allprofiles firewallpolicy allowinboound,allowoutbound
+:: netsh advfirewall firewall add rule name="ICMP Allow incoming V4 echo request" protocol=icmpv4:8,any dir=in action=allow
 
 :: Use small dump file on system failure, see below for setting
 :: 0=None, 1=Complete, 2=Kernel, 3=Small, 7=Automatic
