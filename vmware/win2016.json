@@ -1,0 +1,88 @@
+{
+  "builders": [
+    {
+      "type": "vsphere-iso",
+
+      "vcenter_server": "10.213.252.78",
+      "insecure_connection": "true",
+      "username": "{{user `vcenter_username`}}",
+      "password": "{{user `vcenter_password`}}",
+      "datacenter": "NV02",
+
+      "vm_name":  "Windows_TMPL",
+      "convert_to_template": "true",
+      "cluster": "NV02 Core Services",
+      "host": "svnv02ie00049.int.carlsonwagonlit.com",
+      "datastore": "CorePXFA216",
+      "folder": "Test/Windows",
+
+      "CPUs": "2",
+      "RAM": "8096",
+      "disk_size": "61440",
+      "disk_controller_type": "pvscsi",
+      "disk_thin_provisioned": true,
+      "network_card": "vmxnet3",
+
+      "network": "102-Core_Mgmt_vDS",
+      "guest_os_type": "windows9Server64Guest",
+      "iso_paths": [
+        "[CorePXFA216] ISO/SW_DVD9_Win_Svr_STD_Core_and_DataCtr_Core_2016_64Bit_English_-2_MLF_X21-22843.ISO",
+        "[CorePXFA216] ISO/windows.iso"
+      ],
+
+      "communicator": "winrm",
+      "winrm_username": "ugxg042",
+      "winrm_password": "{{user `winrm_password`}}",
+      "winrm_use_ssl": "false",
+      "shutdown_command": "a:/shutdown.bat",
+      "floppy_files": [
+        "./answer_files/AutoUnattend.xml",
+        "./scripts/post_deploy.cmd",
+        "./scripts/base.cmd",
+        "./scripts/winrm.ps1",
+        "./scripts/sceregvl.inf",
+        "./scripts/changeCDdrive.ps1",
+        "./scripts/apply-nicsettings.ps1",
+        "./scripts/compact.ps1",
+        "./scripts/shutdown.bat",
+        "./scripts/sdelete/sdelete.exe",
+        "./scripts/configure-ansible.ps1",
+        "./scripts/win-updates.ps1",
+        "./scripts/Win2016Features.ps1"
+      ],
+      "floppy_img_path": "[CorePXFA216] floppies/pvscsi-Windows8.flp",
+      "boot_wait": "6m",
+      "shutdown_timeout": "1h",
+      "boot_command": [
+       ]
+      }
+    ],
+    "provisioners": [
+        {
+                       "script": "scripts/apply-nicsettings.ps1",
+                       "elevated_user": "ugxg042",
+                       "elevated_password": "{{user `elevated_password`}}",
+                       "type": "powershell"
+        },
+        {
+                       "script": "scripts/Win2016Features.ps1",
+                       "elevated_user": "ugxg042",
+                       "elevated_password": "{{user `elevated_password`}}",
+                       "type": "powershell"
+        },
+        {
+                       "type": "windows-restart"
+        },
+        {
+                       "script": "scripts/compact.ps1",
+                       "elevated_user": "ugxg042",
+                       "elevated_password": "{{user `elevated_password`}}",
+                       "type": "powershell"
+        },
+        {
+                       "type": "file",
+                       "source": "scripts/configure-ansible.ps1",
+                       "destination": "c:/windows/temp/configure-ansible.ps1"
+        }
+  ]
+}
