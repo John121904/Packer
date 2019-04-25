@@ -26,11 +26,11 @@ fsutil behavior set disablelastaccess 1
 powercfg.exe -h off
 
 :: Install VMware tools from mounted ISO 
-e:\setup64 /s /v "/qb REBOOT=R"
+::e:\setup64 /s /v "/qb REBOOT=R"
 
 ::set static IP
-netsh interface ip set address name="Ethernet0" static 10.213.252.130 255.255.255.0 10.213.252.250
-netsh dnsclient set dnsservers name="Ethernet0" source=static address=10.213.252.25 validate=no
+netsh interface ip set address name="Ethernet" static 10.213.252.130 255.255.255.0 10.213.252.250
+netsh dnsclient set dnsservers name="Ethernet" source=static address=10.213.252.25 validate=no
 
 ::set windows firewall
 netsh advfirewall set allprofiles state on
@@ -130,7 +130,7 @@ reg add "HKLM\Software\Microsoft\Windows\CurrentVersion\Policies\System" /v "Leg
 net start winrm
 
 ::config WinRM
-powershell a:\winrm.ps1
+powershell e:\winrm.ps1
 
 ::winrm quickconfig -quiet
 ::winrm set winrm/config/client/auth '@{Basic="true"}'
@@ -146,7 +146,7 @@ net start winrm
 ::netsh advfirewall set allprofiles firewallpolicy allowinboound,allowoutbound
 
 ::change drive letter
-powershell a:\changeCDdrive.ps1
+powershell e:\changeCDdrive.ps1
 
 :: Restart the Server
 ::shutdown /s /t 60 

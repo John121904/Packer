@@ -1,0 +1,96 @@
+;
+; Copyright (c) 2016 Nutanix Inc. All rights reserved.
+;
+; Nutanix VirtIO Balloon driver setup information file.
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318}
+Provider=%Nutanix%
+DriverVer=05/18/2017,62.61.101.58000
+CatalogFile=Balloon.cat
+DriverPackageType = PlugAndPlay
+DriverPackageDisplayName = %BALLOON.DeviceDesc%
+PnpLockdown = 1
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[SourceDisksNames]
+1 = %DiskId1%,,,""
+
+[SourceDisksFiles]
+balloon.sys  = 1,,
+
+;*****************************************
+; BALLOON  Install Section
+;*****************************************
+
+[Manufacturer]
+%Nutanix%=Standard,NTamd64
+
+[Standard.NTamd64]
+%BALLOON.DeviceDesc%=BALLOON_Device, PCI\VEN_1AF4&DEV_1002&SUBSYS_00051AF4&REV_00
+
+[BALLOON_Device.NT]
+CopyFiles=Drivers_Dir
+
+[Drivers_Dir]
+balloon.sys
+
+
+;-------------- Service installation
+[BALLOON_Device.NT.Services]
+AddService = BALLOON,%SPSVCINST_ASSOCSERVICE%, BALLOON_Service_Inst, BALLOON_Logging_Inst
+
+; -------------- BALLOON driver install sections
+[BALLOON_Service_Inst]
+DisplayName    = %BALLOON.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START 
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %12%\balloon.sys
+
+; -------------- BALLOON driver eventlog install sections
+[BALLOON_Logging_Inst]
+AddReg = BALLOON_Logging_Inst_AddReg
+
+[BALLOON_Logging_Inst_AddReg]
+HKR,,EventMessageFile,0x00020000,"%%SystemRoot%%\System32\IoLogMsg.dll;%%SystemRoot%%\System32\drivers\balloon.sys"
+HKR,,TypesSupported,0x00010001,7
+
+;--- BALLOON_Device Coinstaller installation ------
+;
+
+[DestinationDirs]
+BALLOON_Device_CoInstaller_CopyFiles = 11
+
+[BALLOON_Device.NT.CoInstallers]
+AddReg=BALLOON_Device_CoInstaller_AddReg
+CopyFiles=BALLOON_Device_CoInstaller_CopyFiles
+
+[BALLOON_Device_CoInstaller_AddReg]
+HKR,,CoInstallers32,0x00010000, "WdfCoInstaller01011.dll,WdfCoInstaller"
+
+[BALLOON_Device_CoInstaller_CopyFiles]
+WdfCoInstaller01011.dll
+
+[SourceDisksFiles]
+WdfCoInstaller01011.dll=1 ; make sure the number matches with SourceDisksNames
+
+[BALLOON_Device.NT.Wdf]
+KmdfService =  BALLOON, BALLOON_wdfsect
+[BALLOON_wdfsect]
+KmdfLibraryVersion = 1.11
+
+
+[Strings]
+SPSVCINST_ASSOCSERVICE= 0x00000002
+Nutanix = "Nutanix Inc."
+DiskId1 = "Nutanix VirtIO Balloon Installation Disk #1"
+BALLOON.DeviceDesc = "Nutanix VirtIO Balloon Driver"
+BALLOON.SVCDESC = "Nutanix VirtIO Balloon Service"
+ClassName       = "Nutanix VirtIO Balloon Device"
+
