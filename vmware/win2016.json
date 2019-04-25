@@ -18,12 +18,20 @@
 
       "CPUs": "2",
       "RAM": "8096",
+      "CPU_hot_plug": true,
+      "RAM_hot_plug": true,
       "disk_size": "61440",
       "disk_controller_type": "pvscsi",
       "disk_thin_provisioned": true,
       "network_card": "vmxnet3",
-
       "network": "102-Core_Mgmt_vDS",
+      "configuration_parameters": {
+           "featMask.vm.hv.capable": "Min:1",
+           "ctkEnabled": "TRUE",
+           "scsi0:0.ctkEnabled": "TRUE",
+           "scsi0:1.ctkEnabled": "TRUE",
+           "scsi0:2.ctkEnabled": "TRUE"
+                                  },
       "guest_os_type": "windows9Server64Guest",
       "iso_paths": [
         "[CorePXFA216] ISO/SW_DVD9_Win_Svr_STD_Core_and_DataCtr_Core_2016_64Bit_English_-2_MLF_X21-22843.ISO",
