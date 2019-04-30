@@ -180,5 +180,5 @@ echo ** Run Windows Updates
 :: shutdown /r
 :: pause
 ::a:\windows_hardening.cmd
-a:\post_deploy.cmd
+e:\post_deploy.cmd
 
