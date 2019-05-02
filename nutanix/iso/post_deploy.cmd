@@ -25,8 +25,9 @@ fsutil behavior set disablelastaccess 1
 :: Disable Hibernation
 powercfg.exe -h off
 
-:: Install VMware tools from mounted ISO 
+:: Install Nutanix Guest Tools from mounted ISO 
 ::e:\setup64 /s /v "/qb REBOOT=R"
+e:\setup.exe /quiet ACCEPTEULA=yes /norestart
 
 ::set static IP
 netsh interface ip set address name="Ethernet" static 10.213.252.130 255.255.255.0 10.213.252.250
