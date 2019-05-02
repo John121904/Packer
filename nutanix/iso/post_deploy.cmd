@@ -27,7 +27,7 @@ powercfg.exe -h off
 
 :: Install Nutanix Guest Tools from mounted ISO 
 ::e:\setup64 /s /v "/qb REBOOT=R"
-e:\setup.exe /quiet ACCEPTEULA=yes /norestart
+e:\virtio\Nutanix-VirtIO-1.1.3.msi /quiet ACCEPTEULA=yes /norestart
 
 ::set static IP
 netsh interface ip set address name="Ethernet" static 10.213.252.130 255.255.255.0 10.213.252.250
@@ -150,7 +150,7 @@ net start winrm
 powershell e:\changeCDdrive.ps1
 
 :: Restart the Server
-::shutdown /s /t 60 
+shutdown /r /t 5
 
 ::ping -n 30 127.0.0.1>nul
 
